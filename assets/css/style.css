@@ -21,6 +21,15 @@
 /*===========================
     1. COMMON css 
 ===========================*/
+li a svg path {
+  fill: white; /* Default color */
+  transition: fill 0.3s ease;
+}
+
+li a:hover svg path {
+  fill: #007bff; /* Hover color */
+}
+
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800");
 body {
   font-family: "Poppins", sans-serif;
