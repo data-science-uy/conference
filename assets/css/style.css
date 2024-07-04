@@ -29,6 +29,27 @@ li a svg path {
 li a:hover svg path {
   fill: #007bff; /* Hover color */
 }
+.features-area .features-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.single-features {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  min-height: 350px; /* Adjust this value based on your design needs */
+  margin: 15px; /* Adjust spacing between cards */
+  height:  94%;
+}
+
+.features-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800");
 body {
@@ -1184,10 +1205,7 @@ p {
     .single-gallery .gallery-content a {
       color: #fff;
       font-size: 140px; }
-  .single-gallery:hover .gallery-image::before {
-    opacity: 1; }
-  .single-gallery:hover .gallery-content {
-    opacity: 1; }
+
 
 /*===========================
        8.PRICING css 
