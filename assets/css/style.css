@@ -26,6 +26,13 @@ li a svg path {
   transition: fill 0.3s ease;
 }
 
+.customtextalign{
+
+  align-items: center;
+  display: flex;
+  height: -webkit-fill-available;
+}
+
 li a:hover svg path {
   fill: #007bff; /* Hover color */
 }
