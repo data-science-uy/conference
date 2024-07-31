@@ -26,6 +26,20 @@ li a svg path {
   transition: fill 0.3s ease;
 }
 
+.single-sponsor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sponsor-logo {
+  width: 75%;
+  max-width: 200px; /* Adjust the max width as needed */
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .customtextalign{
 
   align-items: center;
