@@ -1143,8 +1143,10 @@ p {
             .single-team .team-content .team-social .social li a:hover {
               color: #1863ff; }
     .single-team .team-content .team-name a {
+
+  text-align: center;
       color: #1b273d;
-      font-size: 24px;
+      font-size: 20px;
       font-weight: 600;
       -webkit-transition: all 0.3s ease-out 0s;
       -moz-transition: all 0.3s ease-out 0s;
@@ -1156,7 +1158,10 @@ p {
           font-size: 18px; } }
     .single-team .team-content .sub-title {
       font-size: 16px;
-      color: #1863ff;
+      color: #1b273d;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: normal;
       -webkit-transition: all 0.3s ease-out 0s;
       -moz-transition: all 0.3s ease-out 0s;
       -ms-transition: all 0.3s ease-out 0s;
