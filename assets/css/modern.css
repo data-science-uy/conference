@@ -1215,6 +1215,18 @@ html {
     color: var(--primary-color);
 }
 
+/* ========================================
+   BLACK SPONSOR SPECIAL STYLING
+======================================== */
+/* Simple larger logo for Black Sponsor */
+.sponsor-black .sponsor-logo {
+    height: 200px !important;
+}
+
+.sponsor-black .sponsor-logo img {
+    max-height: 180px !important;
+}
+
 /* Responsive adjustments for sponsors */
 @media (max-width: 768px) {
     .sponsor-card {
@@ -1233,6 +1245,15 @@ html {
     
     .sponsor-name h5 {
         font-size: 14px;
+    }
+    
+    /* Black sponsor mobile adjustments */
+    .sponsor-black .sponsor-logo {
+        height: 140px !important;
+    }
+    
+    .sponsor-black .sponsor-logo img {
+        max-height: 120px !important;
     }
 }
 
@@ -1260,6 +1281,15 @@ html {
     
     .sponsor-name h5 {
         font-size: 13px;
+    }
+    
+    /* Black sponsor small mobile adjustments */
+    .sponsor-black .sponsor-logo {
+        height: 120px !important;
+    }
+    
+    .sponsor-black .sponsor-logo img {
+        max-height: 100px !important;
     }
 } 
 
