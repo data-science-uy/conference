@@ -1476,4 +1476,83 @@ html {
         padding: 12px 25px;
         font-size: 14px;
     }
-} 
+}
+
+/* ========================================
+   MULTI-SPEAKER GRID LAYOUT
+======================================== */
+
+/* Consistent border-radius for all speaker images */
+.speaker-image img,
+.speaker-photo img {
+    border-radius: 12px;
+}
+
+.multi-speaker-grid {
+    display: grid;
+    gap: 8px;
+    width: 100%;
+    height: 280px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Two speakers layout */
+.multi-speaker-grid:not(.three-speakers) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+/* Three speakers layout - equal sized photos in a row */
+.multi-speaker-grid.three-speakers {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.multi-speaker-grid.three-speakers .speaker-photo:first-child {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.multi-speaker-grid.three-speakers .speaker-photo:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.multi-speaker-grid.three-speakers .speaker-photo:nth-child(3) {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.speaker-photo {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #f0f0f0;
+}
+
+.speaker-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.speaker-card:hover .speaker-photo img {
+    transform: scale(1.05);
+}
+
+/* Responsive adjustments for multi-speaker cards */
+@media (max-width: 768px) {
+    .multi-speaker-grid {
+        height: 180px;
+        gap: 6px;
+    }
+}
+
+@media (max-width: 480px) {
+    .multi-speaker-grid {
+        height: 160px;
+        gap: 4px;
+    }
+}
