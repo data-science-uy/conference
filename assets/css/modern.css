@@ -1556,3 +1556,46 @@ html {
         gap: 4px;
     }
 }
+
+/* Featured three-speaker cards */
+.featured-speaker-card {
+    transform: scale(1.02);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+}
+
+.featured-speaker-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.featured-speaker-card .speaker-content {
+    background: rgba(255, 255, 255, 0.95);
+}
+
+/* Center text in all speaker cards */
+.speaker-content {
+    text-align: center;
+}
+
+.speaker-name {
+    text-align: center;
+}
+
+.speaker-title {
+    text-align: center;
+}
+
+.speaker-description {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .featured-speaker-card {
+        transform: scale(1.01);
+    }
+    
+    .featured-speaker-card:hover {
+        transform: scale(1.03);
+    }
+}
