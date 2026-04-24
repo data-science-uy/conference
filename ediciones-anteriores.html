@@ -43,7 +43,103 @@
     <link rel="stylesheet" href="assets/css/modern.css">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+
+    <style>
+        .archive-speakers-wrap {
+            margin-top: 50px;
+        }
+
+        .archive-year {
+            margin-bottom: 24px;
+            overflow: hidden;
+            background: #fff;
+            border: 1px solid rgba(22, 100, 255, 0.12);
+            border-radius: 18px;
+            box-shadow: var(--shadow-light);
+        }
+
+        .archive-year summary {
+            padding: 24px 28px;
+            cursor: pointer;
+            list-style: none;
+        }
+
+        .archive-year summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .archive-year-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .archive-year-label {
+            display: inline-block;
+            margin-bottom: 8px;
+            color: var(--primary-color);
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .archive-year-header h3 {
+            margin: 0;
+            color: var(--dark-color);
+            font-size: 1.8rem;
+        }
+
+        .archive-year-header p {
+            margin: 10px 0 0;
+            color: var(--text-muted);
+        }
+
+        .archive-year-indicator {
+            width: 48px;
+            height: 48px;
+            flex-shrink: 0;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(22, 100, 255, 0.08);
+            color: var(--primary-color);
+            border-radius: 50%;
+            font-size: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .archive-year[open] .archive-year-indicator {
+            transform: rotate(180deg);
+        }
+
+        .archive-year-body {
+            padding: 0 28px 28px;
+        }
+
+        .archive-year-actions {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        @media (max-width: 767px) {
+            .archive-year-header {
+                align-items: flex-start;
+            }
+
+            .archive-year-header h3 {
+                font-size: 1.5rem;
+            }
+
+            .archive-year summary,
+            .archive-year-body {
+                padding-left: 22px;
+                padding-right: 22px;
+            }
+        }
+    </style>
 
 </head>
 
@@ -94,10 +190,10 @@
                                         <a href="index.html#about">Sobre el evento</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="index.html#sponsors">Sponsors 2025</a>
+                                        <a href="index.html#speakers">Speakers</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="index.html#sponsor">Ser sponsor</a>
+                                        <a href="index.html#sponsors">Sponsors</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="index.html#location">Ubicación</a>
@@ -105,7 +201,7 @@
                                     <li class="nav-item">
                                         <a href="index.html#footer">Contacto</a>
                                     </li>
-                                    <li class="nav-item active">
+                                    <li class="nav-item">
                                         <a href="ediciones-anteriores.html">Ediciones Anteriores</a>
                                     </li>
                                 </ul>
@@ -122,7 +218,7 @@
                     <div class="col-lg-10">
                         <div class="header-content text-center">
                             <h1 class="header-title modern-title">Ediciones <span class="highlight">Anteriores</span></h1>
-                            <h2 class="sub-title modern-subtitle">Revive los mejores momentos de ConnectIA</h2>
+                            <h2 class="sub-title modern-subtitle">Reviví lo que pasó y descubrí lo que se viene en ConnectIA</h2>
                         </div>
                     </div>
                 </div>
@@ -138,8 +234,8 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="section-title text-center pb-50">
-                        <span class="section-subtitle">ConnectIA 2024</span>
-                        <h2 class="title modern-title">Revive los mejores <span class="highlight">momentos</span></h2>
+                        <span class="section-subtitle">Galería</span>
+                        <h2 class="title modern-title">Reviví los mejores <span class="highlight">momentos</span></h2>
                         <p class="text">La primera edición de ConnectIA fue un éxito rotundo. Más de 300 asistentes, speakers de primer nivel y conexiones que perduran.</p>
                     </div>
                 </div>
@@ -224,339 +320,569 @@
     </section>
     <!--====== GALLERY 2024 PART ENDS ======-->
 
-    <!--====== SPEAKERS 2024 PART START ======-->
-    <section id="speakers-2024" class="speakers-2024-area modern-section pt-115 pb-130">
+    <!--====== SPEAKERS ARCHIVE PART START ======-->
+    <section id="speakers-archive" class="speakers-2024-area modern-section pt-115 pb-130 gray-bg">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-8">
+                <div class="col-lg-10">
                     <div class="section-title text-center pb-50">
-                        <span class="section-subtitle">ConnectIA 2024</span>
-                        <h2 class="title modern-title">Speakers que marcaron <span class="highlight">la diferencia</span></h2>
-                        <p class="text">Los líderes de la industria que compartieron su conocimiento en la primera edición de ConnectIA. Revive sus charlas y descubre las tendencias que están transformando Uruguay.</p>
+                        <span class="section-subtitle">Speakers</span>
+                        <h2 class="title modern-title">Repasá las <span class="highlight">ediciones pasadas</span></h2>
+                        <p class="text">Un recorrido por las voces, ideas y conversaciones que hicieron crecer a ConnectIA en cada edición.</p>
                     </div>
                 </div>
             </div>
-            
-            <div class="speakers-grid">
-            <div class="row">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="speaker-card modern-card wow fadeInUp" data-wow-delay="0.1s">
-                            <div class="speaker-image">
-                                <img src="assets/images/speaker_eliana.jpeg" alt="Eliana Budelli">
-                                <div class="play-overlay">
-                                    <a href="https://youtu.be/Bn8Opqdnh6c?si=3uAHiavbQqSlrR08" target="_blank" class="play-btn">
-                                        <i class="lni-play"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="speaker-content">
-                                <h4 class="speaker-name">Eliana Budelli</h4>
-                                <p class="speaker-title">Evaluando soluciones basadas en LLM</p>
-                                <p class="speaker-description">Metodologías y métricas para evaluar efectivamente sistemas basados en modelos de lenguaje grande.</p>
-                                <a href="https://youtu.be/Bn8Opqdnh6c?si=3uAHiavbQqSlrR08" target="_blank" class="speaker-link">Ver charla <i class="lni-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-4 col-md-6">
-                        <div class="speaker-card modern-card wow fadeInUp" data-wow-delay="0.2s">
-                            <div class="speaker-image">
-                                <img src="assets/images/speaker_alfredo.jpeg" alt="Alfredo Solari">
-                                <div class="play-overlay">
-                                    <a href="https://www.youtube.com/watch?v=Jbw5sy9zEyc" target="_blank" class="play-btn">
-                                        <i class="lni-play"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="speaker-content">
-                                <h4 class="speaker-name">Alfredo Solari</h4>
-                                <p class="speaker-title">De Uruguay al Mundo</p>
-                                <p class="speaker-description">Aplicaciones de IA para el sector productivo y el estado, mostrando casos de éxito uruguayos.</p>
-                                <a href="https://www.youtube.com/watch?v=Jbw5sy9zEyc" target="_blank" class="speaker-link">Ver charla <i class="lni-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-4 col-md-6">
-                        <div class="speaker-card modern-card wow fadeInUp" data-wow-delay="0.3s">
-                            <div class="speaker-image">
-                                <img src="assets/images/speaker_enzo.jpeg" alt="Enzo Faliveni">
-                                <div class="play-overlay">
-                                    <a href="https://www.youtube.com/watch?v=x8IhuNoxY0A" target="_blank" class="play-btn">
-                                        <i class="lni-play"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="speaker-content">
-                                <h4 class="speaker-name">Enzo Faliveni</h4>
-                                <p class="speaker-title">Modelo de ranking online</p>
-                                <p class="speaker-description">Diseño de modelo de ranking online de baja latencia para sistemas de recomendación.</p>
-                                <a href="https://www.youtube.com/watch?v=x8IhuNoxY0A" target="_blank" class="speaker-link">Ver charla <i class="lni-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-4 col-md-6">
-                        <div class="speaker-card modern-card wow fadeInUp" data-wow-delay="0.4s">
-                            <div class="speaker-image">
-                                <img src="assets/images/speaker_agustina.jpeg" alt="Agustina Disiot">
-                                <div class="play-overlay">
-                                    <a href="https://www.youtube.com/watch?v=vkuE7elhFcc" target="_blank" class="play-btn">
-                                        <i class="lni-play"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="speaker-content">
-                                <h4 class="speaker-name">Agustina Disiot</h4>
-                                <p class="speaker-title">DCO: Creación de creatives con IA</p>
-                                <p class="speaker-description">Cómo la IA generativa está revolucionando la creación de contenido publicitario digital.</p>
-                                <a href="https://www.youtube.com/watch?v=vkuE7elhFcc" target="_blank" class="speaker-link">Ver charla <i class="lni-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-4 col-md-6">
-                        <div class="speaker-card modern-card wow fadeInUp" data-wow-delay="0.5s">
-                            <div class="speaker-image">
-                                <img src="assets/images/speaker_lucas.jpeg" alt="Lucas Baldezzari">
-                                <div class="play-overlay">
-                                    <a href="https://youtu.be/jxCfgI-KhHs?si=M3NL5c7Wz27tc3XB" target="_blank" class="play-btn">
-                                        <i class="lni-play"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="speaker-content">
-                                <h4 class="speaker-name">Lucas Baldezzari</h4>
-                                <p class="speaker-title">Interfaces Cerebro Computadora</p>
-                                <p class="speaker-description">La convergencia entre neurociencia e inteligencia artificial para crear interfaces innovadoras.</p>
-                                <a href="https://youtu.be/jxCfgI-KhHs?si=M3NL5c7Wz27tc3XB" target="_blank" class="speaker-link">Ver charla <i class="lni-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-4 col-md-6">
-                        <div class="speaker-card modern-card wow fadeInUp" data-wow-delay="0.6s">
-                            <div class="speaker-image">
-                                <img src="assets/images/speaker_alicia.jpeg" alt="Alicia Cabrera">
-                                <div class="play-overlay">
-                                    <a href="https://www.youtube.com/watch?v=lZgMG5V2g5c" target="_blank" class="play-btn">
-                                        <i class="lni-play"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="speaker-content">
-                                <h4 class="speaker-name">Alicia Cabrera</h4>
-                                <p class="speaker-title">IAG: Transformando empresas</p>
-                                <p class="speaker-description">Cómo la IA Generativa está transformando nuestra empresa y la de nuestros clientes.</p>
-                                <a href="https://www.youtube.com/watch?v=lZgMG5V2g5c" target="_blank" class="speaker-link">Ver charla <i class="lni-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="col-lg-4 col-md-6">
-                        <div class="speaker-card modern-card wow fadeInUp" data-wow-delay="0.7s">
-                            <div class="speaker-image">
-                                <img src="assets/images/speaker_ana.jpeg" alt="Ana Lía Villarreal">
-                                <div class="play-overlay">
-                                    <a href="https://www.youtube.com/watch?v=tMFYepl5swU" target="_blank" class="play-btn">
-                                        <i class="lni-play"></i>
-                                    </a>
-                                </div>
+            <div class="archive-speakers-wrap">
+                <details class="archive-year" open>
+                    <summary>
+                        <div class="archive-year-header">
+                            <div>
+                                <span class="archive-year-label">Visible ahora</span>
+                                <h3>Speakers 2025</h3>
+                                <p>La segunda edición reunió charlas técnicas, paneles y casos de uso aplicados en IA.</p>
                             </div>
-                            <div class="speaker-content">
-                                <h4 class="speaker-name">Ana Lía Villarreal</h4>
-                                <p class="speaker-title">Nuevas tecnologías como aliadas</p>
-                                <p class="speaker-description">Empoderando a mi hija con diabetes tipo 1 a través de la tecnología.</p>
-                                <a href="https://www.youtube.com/watch?v=tMFYepl5swU" target="_blank" class="speaker-link">Ver charla <i class="lni-arrow-right"></i></a>
-                            </div>
+                            <span class="archive-year-indicator">
+                                <i class="lni-chevron-down"></i>
+                            </span>
                         </div>
-                    </div>
+                    </summary>
 
-                    <div class="col-lg-4 col-md-6">
-                        <div class="speaker-card modern-card wow fadeInUp" data-wow-delay="0.8s">
-                            <div class="speaker-image">
-                                <img src="assets/images/speaker_sebastian.jpeg" alt="Sebastian Diaz">
-                                <div class="play-overlay">
-                                    <a href="https://www.youtube.com/watch?v=3uscH6SVts8" target="_blank" class="play-btn">
-                                        <i class="lni-play"></i>
-                                    </a>
+                    <div class="archive-year-body">
+                        <div class="speakers-grid">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="speaker-card modern-card featured-speaker-card wow fadeInUp" data-wow-delay="0.05s">
+                                        <div class="speaker-image">
+                                            <div class="multi-speaker-grid three-speakers">
+                                                <div class="speaker-photo">
+                                                    <img src="assets/images/speaker_pablo_bocca.png" alt="Pablo Rodríguez Bocca">
+                                                </div>
+                                                <div class="speaker-photo">
+                                                    <img src="assets/images/speaker_martin_liguori.png" alt="Martin Liguori">
+                                                </div>
+                                                <div class="speaker-photo">
+                                                    <img src="assets/images/speaker_sabrina_sauksteliskis.png" alt="Sabrina Sauksteliskis">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="speaker-content">
+                                            <h4 class="speaker-name">Pablo Rodríguez Bocca - Zapia</h4>
+                                            <h4 class="speaker-name">Martin Liguori - Meet PIA</h4>
+                                            <h4 class="speaker-name">Sabrina Sauksteliskis</h4>
+                                            <p class="speaker-title">Panel IA y trabajo humano: ¿nos reemplaza o nos ayuda?</p>
+                                            <p class="speaker-description">Conversación sobre cómo la IA está transformando el trabajo, con ejemplos reales donde potenció resultados o generó desafíos, y una mirada hacia un futuro más colaborativo.</p>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="speaker-content">
-                                <h4 class="speaker-name">Sebastian Diaz</h4>
-                                <p class="speaker-title">AI Systems y LLMs</p>
-                                <p class="speaker-description">Aplicación de LLMs más allá de chatbots en sistemas de inteligencia artificial.</p>
-                                <a href="https://www.youtube.com/watch?v=3uscH6SVts8" target="_blank" class="speaker-link">Ver charla <i class="lni-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="col-lg-4 col-md-6">
-                        <div class="speaker-card modern-card wow fadeInUp" data-wow-delay="0.9s">
-                            <div class="speaker-image">
-                                <img src="assets/images/speaker_agustin.jpeg" alt="Agustín Lucas">
-                                <div class="play-overlay">
-                                    <a href="https://www.youtube.com/watch?v=oaxJ5uZNbmI" target="_blank" class="play-btn">
-                                        <i class="lni-play"></i>
-                                    </a>
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="speaker-card modern-card featured-speaker-card wow fadeInUp" data-wow-delay="0.6s">
+                                        <div class="speaker-image">
+                                            <div class="multi-speaker-grid three-speakers">
+                                                <div class="speaker-photo">
+                                                    <img src="assets/images/speaker_santiago_carrera.png" alt="Santiago Carrera">
+                                                </div>
+                                                <div class="speaker-photo">
+                                                    <img src="assets/images/speaker_marcos_soto.png" alt="Marcos Soto">
+                                                </div>
+                                                <div class="speaker-photo">
+                                                    <img src="assets/images/speaker_nicolas_sosa.png" alt="Nicolás Sosa">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="speaker-content">
+                                            <h4 class="speaker-name">Santiago Carrera - SunnyData</h4>
+                                            <h4 class="speaker-name">Marcos Soto - XmartLabs</h4>
+                                            <h4 class="speaker-name">Nicolás Sosa - Blend360</h4>
+                                            <p class="speaker-title">Desafíos de la puesta en producción: del concepto al producto en IA</p>
+                                            <p class="speaker-description">Los desafíos reales de convertir conceptos en productos: calidad de datos, escalabilidad, costos y equilibrio entre expectativas y viabilidad técnica.</p>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="speaker-content">
-                                <h4 class="speaker-name">Agustín Lucas</h4>
-                                <p class="speaker-title">Traducción automática guaraní-español</p>
-                                <p class="speaker-description">Data augmentation para mejorar la traducción automática de lenguas indígenas.</p>
-                                <a href="https://www.youtube.com/watch?v=oaxJ5uZNbmI" target="_blank" class="speaker-link">Ver charla <i class="lni-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="col-lg-4 col-md-6">
-                        <div class="speaker-card modern-card wow fadeInUp" data-wow-delay="1.0s">
-                            <div class="speaker-image">
-                                <img src="assets/images/speaker_angie.jpeg" alt="Angie Lecot">
-                                <div class="play-overlay">
-                                    <a href="https://www.youtube.com/watch?v=i32EGY9R4P4" target="_blank" class="play-btn">
-                                        <i class="lni-play"></i>
-                                    </a>
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="speaker-card modern-card wow fadeInUp" data-wow-delay="0.55s">
+                                        <div class="speaker-image">
+                                            <img src="assets/images/speaker_pablo_pereira.jpg" alt="Pablo Kevin Pereira">
+                                        </div>
+                                        <div class="speaker-content">
+                                            <h4 class="speaker-name">Pablo Kevin Pereira</h4>
+                                            <p class="speaker-title">Mano robótica inteligente para emulación de agarres</p>
+                                            <p class="speaker-description">Prototipo de mano robótica que integra ML y robótica para emular agarres funcionales, combinando segmentación de imágenes, clasificación y simulación en ROS2.</p>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="speaker-content">
-                                <h4 class="speaker-name">Angie Lecot</h4>
-                                <p class="speaker-title">Panel IA Segura</p>
-                                <p class="speaker-description">Discussión sobre los retos y oportunidades de la Inteligencia Artificial Segura.</p>
-                                <a href="https://www.youtube.com/watch?v=i32EGY9R4P4" target="_blank" class="speaker-link">Ver charla <i class="lni-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="col-lg-4 col-md-6">
-                        <div class="speaker-card modern-card wow fadeInUp" data-wow-delay="1.1s">
-                            <div class="speaker-image">
-                                <img src="assets/images/speaker_ivan.jpeg" alt="Iván Monjardin">
-                                <div class="play-overlay">
-                                    <a href="https://www.youtube.com/watch?v=vkuE7elhFcc" target="_blank" class="play-btn">
-                                        <i class="lni-play"></i>
-                                    </a>
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="speaker-card modern-card wow fadeInUp" data-wow-delay="0.6s">
+                                        <div class="speaker-image">
+                                            <img src="assets/images/speaker_leonardo_pineyro.jpg" alt="Leonardo Piñeyro">
+                                        </div>
+                                        <div class="speaker-content">
+                                            <h4 class="speaker-name">Leonardo Piñeyro</h4>
+                                            <p class="speaker-title">Graph Neural Networks para recomendaciones</p>
+                                            <p class="speaker-description">Introducción a las GNNs y su aplicación en sistemas de recomendación multi-modales, procesando datos heterogéneos en formato de grafo para mejorar personalización.</p>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="speaker-content">
-                                <h4 class="speaker-name">Iván Monjardin</h4>
-                                <p class="speaker-title">DCO: Creación de creatives con IA</p>
-                                <p class="speaker-description">Innovación en la creación de contenido publicitario usando inteligencia artificial generativa.</p>
-                                <a href="https://www.youtube.com/watch?v=vkuE7elhFcc" target="_blank" class="speaker-link">Ver charla <i class="lni-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="col-lg-4 col-md-6">
-                        <div class="speaker-card modern-card wow fadeInUp" data-wow-delay="1.2s">
-                            <div class="speaker-image">
-                                <img src="assets/images/speaker_kenji.jpeg" alt="Kenji Nakasone">
-                                <div class="play-overlay">
-                                    <a href="https://www.youtube.com/watch?v=lZgMG5V2g5c" target="_blank" class="play-btn">
-                                        <i class="lni-play"></i>
-                                    </a>
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="speaker-card modern-card wow fadeInUp" data-wow-delay="0.55s">
+                                        <div class="speaker-image">
+                                            <img src="assets/images/speaker_yasmine.jpg" alt="Yasmine Alejandra Anchén Moreira">
+                                        </div>
+                                        <div class="speaker-content">
+                                            <h4 class="speaker-name">Yasmine Anchén</h4>
+                                            <p class="speaker-title">IA en el diagnóstico por imágenes médicas</p>
+                                            <p class="speaker-description">Impacto actual y futuro de la IA en diagnóstico médico por imágenes en Uruguay, abordando precisión, privacidad de datos y marcos éticos.</p>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="speaker-content">
-                                <h4 class="speaker-name">Kenji Nakasone</h4>
-                                <p class="speaker-title">IAG: Transformando empresas</p>
-                                <p class="speaker-description">Estrategias de implementación de IA Generativa en entornos empresariales.</p>
-                                <a href="https://www.youtube.com/watch?v=lZgMG5V2g5c" target="_blank" class="speaker-link">Ver charla <i class="lni-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="col-lg-4 col-md-6">
-                        <div class="speaker-card modern-card wow fadeInUp" data-wow-delay="1.3s">
-                            <div class="speaker-image">
-                                <img src="assets/images/speaker_maria_noel.jpeg" alt="Maria Noel Espinosa">
-                                <div class="play-overlay">
-                                    <a href="https://www.youtube.com/watch?v=e7aVaPqPNo8" target="_blank" class="play-btn">
-                                        <i class="lni-play"></i>
-                                    </a>
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="speaker-card modern-card wow fadeInUp" data-wow-delay="0.6s">
+                                        <div class="speaker-image">
+                                            <img src="assets/images/speaker_camilo_borba.jpeg" alt="Camilo Borba">
+                                        </div>
+                                        <div class="speaker-content">
+                                            <h4 class="speaker-name">Camilo Borba</h4>
+                                            <p class="speaker-title">Predicción genómica: métodos, resultados y desafíos actuales</p>
+                                            <p class="speaker-description">Desde métodos clásicos como GBLUP hasta enfoques modernos con deep learning y Transformers, explorando la integración genómica-ambiental en maíz.</p>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="speaker-content">
-                                <h4 class="speaker-name">Maria Noel Espinosa</h4>
-                                <p class="speaker-title">Soluciones end-to-end de IA</p>
-                                <p class="speaker-description">Experiencias en el desarrollo de soluciones completas de inteligencia artificial.</p>
-                                <a href="https://www.youtube.com/watch?v=e7aVaPqPNo8" target="_blank" class="speaker-link">Ver charla <i class="lni-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="col-lg-4 col-md-6">
-                        <div class="speaker-card modern-card wow fadeInUp" data-wow-delay="1.4s">
-                            <div class="speaker-image">
-                                <img src="assets/images/speaker_pablo.jpeg" alt="Pablo Blanco">
-                                <div class="play-overlay">
-                                    <a href="https://www.youtube.com/watch?v=i32EGY9R4P4" target="_blank" class="play-btn">
-                                        <i class="lni-play"></i>
-                                    </a>
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="speaker-card modern-card wow fadeInUp" data-wow-delay="0.55s">
+                                        <div class="speaker-image">
+                                            <img src="assets/images/speaker_jorge_figueredo.jpeg" alt="Jorge Figueredo">
+                                        </div>
+                                        <div class="speaker-content">
+                                            <h4 class="speaker-name">Jorge Figueredo (Solcre)</h4>
+                                            <p class="speaker-title">AI Future: Cómo preparar tu empresa para la IA</p>
+                                            <p class="speaker-description">Estrategias para integrar IA de forma efectiva en empresas, abordando adopción en procesos internos, cambios culturales y tendencias futuras.</p>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="speaker-content">
-                                <h4 class="speaker-name">Pablo Blanco</h4>
-                                <p class="speaker-title">Panel IA Segura</p>
-                                <p class="speaker-description">Perspectivas sobre seguridad y ética en sistemas de inteligencia artificial.</p>
-                                <a href="https://www.youtube.com/watch?v=i32EGY9R4P4" target="_blank" class="speaker-link">Ver charla <i class="lni-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="col-lg-4 col-md-6">
-                        <div class="speaker-card modern-card wow fadeInUp" data-wow-delay="1.5s">
-                            <div class="speaker-image">
-                                <img src="assets/images/speaker_lorena.jpeg" alt="Lorena Etcheverry">
-                                <div class="play-overlay">
-                                    <a href="https://www.youtube.com/watch?v=i32EGY9R4P4" target="_blank" class="play-btn">
-                                        <i class="lni-play"></i>
-                                    </a>
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="speaker-card modern-card wow fadeInUp" data-wow-delay="0.6s">
+                                        <div class="speaker-image">
+                                            <div class="multi-speaker-grid">
+                                                <div class="speaker-photo">
+                                                    <img src="assets/images/speaker_marcos_muraro.png" alt="Marcos Muraro">
+                                                </div>
+                                                <div class="speaker-photo">
+                                                    <img src="assets/images/speaker_facundo_serna.jpg" alt="Facundo Serna">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="speaker-content">
+                                            <h4 class="speaker-name">Marcos Muraro &amp; Facundo Serna</h4>
+                                            <p class="speaker-title">Los desafíos de modelar "¿cuándo llegará mi pedido?"</p>
+                                            <p class="speaker-description">Modelo probabilístico basado en NGBoost y redes neuronales con natural gradients para predecir tiempos de entrega precisos en marketplaces.</p>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="speaker-content">
-                                <h4 class="speaker-name">Lorena Etcheverry</h4>
-                                <p class="speaker-title">Panel IA Segura</p>
-                                <p class="speaker-description">Investigación académica sobre los desafíos de la inteligencia artificial responsable.</p>
-                                <a href="https://www.youtube.com/watch?v=i32EGY9R4P4" target="_blank" class="speaker-link">Ver charla <i class="lni-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="col-lg-4 col-md-6">
-                        <div class="speaker-card modern-card wow fadeInUp" data-wow-delay="1.6s">
-                            <div class="speaker-image">
-                                <img src="assets/images/speaker_alexis.jpeg" alt="Alexis Baladón">
-                                <div class="play-overlay">
-                                    <a href="https://www.youtube.com/watch?v=oaxJ5uZNbmI" target="_blank" class="play-btn">
-                                        <i class="lni-play"></i>
-                                    </a>
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="speaker-card modern-card wow fadeInUp" data-wow-delay="0.55s">
+                                        <div class="speaker-image">
+                                            <img src="assets/images/speaker_jose_garcia.jpg" alt="Jose García Gaudio">
+                                        </div>
+                                        <div class="speaker-content">
+                                            <h4 class="speaker-name">Jose García</h4>
+                                            <p class="speaker-title">IA como potenciador de la Agricultura</p>
+                                            <p class="speaker-description">Casos reales de IA desarrollada en Uruguay para agricultura en la región: predicción de rendimientos, detección automática de uso de suelo y automatización.</p>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="speaker-content">
-                                <h4 class="speaker-name">Alexis Baladón</h4>
-                                <p class="speaker-title">Traducción automática guaraní-español</p>
-                                <p class="speaker-description">Técnicas avanzadas de data augmentation para lenguas con recursos limitados.</p>
-                                <a href="https://www.youtube.com/watch?v=oaxJ5uZNbmI" target="_blank" class="speaker-link">Ver charla <i class="lni-arrow-right"></i></a>
+
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="speaker-card modern-card wow fadeInUp" data-wow-delay="0.6s">
+                                        <div class="speaker-image">
+                                            <img src="assets/images/speaker_graciana_castro.png" alt="Graciana Castro">
+                                        </div>
+                                        <div class="speaker-content">
+                                            <h4 class="speaker-name">Graciana Castro</h4>
+                                            <p class="speaker-title">Seguimiento Automatizado de Peces para una Pesca Sostenible</p>
+                                            <p class="speaker-description">Solución integral con cámaras, Edge computing y ML para detectar y contabilizar capturas en tiempo real, generando reportes de actividad pesquera.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="speaker-card modern-card wow fadeInUp" data-wow-delay="0.55s">
+                                        <div class="speaker-image">
+                                            <div class="multi-speaker-grid">
+                                                <div class="speaker-photo">
+                                                    <img src="assets/images/speaker_maria_curi.jpg" alt="María Eugenia Curi">
+                                                </div>
+                                                <div class="speaker-photo">
+                                                    <img src="assets/images/speaker_ana_nobile.jpg" alt="Ana Clara Nóbile">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="speaker-content">
+                                            <h4 class="speaker-name">Eugenia Curi &amp; Clara Nóbile</h4>
+                                            <p class="speaker-title">IA generativa en la evaluación educativa</p>
+                                            <p class="speaker-description">Herramientas de Ceibal con IA generativa para facilitar corrección de tareas, optimizando tiempo docente y brindando retroalimentación personalizada.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="speaker-card modern-card wow fadeInUp" data-wow-delay="0.6s">
+                                        <div class="speaker-image">
+                                            <img src="assets/images/speaker_santiago_moron.jpg" alt="Santiago Morón">
+                                        </div>
+                                        <div class="speaker-content">
+                                            <h4 class="speaker-name">Santiago Morón</h4>
+                                            <p class="speaker-title">Análisis de Privacidad en Modelos de Lenguaje</p>
+                                            <p class="speaker-description">Ataques de privacidad en modelos de lenguaje, técnicas de mitigación y avances en privacidad diferencial para sistemas de IA responsable.</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            
-            <div class="row mt-60">
-                <div class="col-lg-12">
-                    <div class="text-center">
-                        <a class="main-btn main-btn-2 modern-btn" href="https://youtube.com/playlist?list=PLRlkZbaqHfbsPH7mqpamUjnULnA8j2-Ms" target="_blank">
-                            <i class="lni-youtube"></i> Ver todas las charlas
-                        </a>
+                </details>
+
+                <details class="archive-year">
+                    <summary>
+                        <div class="archive-year-header">
+                            <div>
+                                <span class="archive-year-label">Oculto por defecto</span>
+                                <h3>Speakers 2024</h3>
+                                <p>La primera edición reunió referentes de la industria, academia y comunidad técnica en Uruguay.</p>
+                            </div>
+                            <span class="archive-year-indicator">
+                                <i class="lni-chevron-down"></i>
+                            </span>
+                        </div>
+                    </summary>
+
+                    <div class="archive-year-body">
+                        <div class="speakers-grid">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="speaker-card modern-card wow fadeInUp" data-wow-delay="0.1s">
+                                        <div class="speaker-image">
+                                            <img src="assets/images/speaker_eliana.jpeg" alt="Eliana Budelli">
+                                            <div class="play-overlay">
+                                                <a href="https://youtu.be/Bn8Opqdnh6c?si=3uAHiavbQqSlrR08" target="_blank" class="play-btn">
+                                                    <i class="lni-play"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="speaker-content">
+                                            <h4 class="speaker-name">Eliana Budelli</h4>
+                                            <p class="speaker-title">Evaluando soluciones basadas en LLM</p>
+                                            <p class="speaker-description">Metodologías y métricas para evaluar efectivamente sistemas basados en modelos de lenguaje grande.</p>
+                                            <a href="https://youtu.be/Bn8Opqdnh6c?si=3uAHiavbQqSlrR08" target="_blank" class="speaker-link">Ver charla <i class="lni-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="speaker-card modern-card wow fadeInUp" data-wow-delay="0.2s">
+                                        <div class="speaker-image">
+                                            <img src="assets/images/speaker_alfredo.jpeg" alt="Alfredo Solari">
+                                            <div class="play-overlay">
+                                                <a href="https://www.youtube.com/watch?v=Jbw5sy9zEyc" target="_blank" class="play-btn">
+                                                    <i class="lni-play"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="speaker-content">
+                                            <h4 class="speaker-name">Alfredo Solari</h4>
+                                            <p class="speaker-title">De Uruguay al Mundo</p>
+                                            <p class="speaker-description">Aplicaciones de IA para el sector productivo y el estado, mostrando casos de éxito uruguayos.</p>
+                                            <a href="https://www.youtube.com/watch?v=Jbw5sy9zEyc" target="_blank" class="speaker-link">Ver charla <i class="lni-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="speaker-card modern-card wow fadeInUp" data-wow-delay="0.3s">
+                                        <div class="speaker-image">
+                                            <img src="assets/images/speaker_enzo.jpeg" alt="Enzo Faliveni">
+                                            <div class="play-overlay">
+                                                <a href="https://www.youtube.com/watch?v=x8IhuNoxY0A" target="_blank" class="play-btn">
+                                                    <i class="lni-play"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="speaker-content">
+                                            <h4 class="speaker-name">Enzo Faliveni</h4>
+                                            <p class="speaker-title">Modelo de ranking online</p>
+                                            <p class="speaker-description">Diseño de modelo de ranking online de baja latencia para sistemas de recomendación.</p>
+                                            <a href="https://www.youtube.com/watch?v=x8IhuNoxY0A" target="_blank" class="speaker-link">Ver charla <i class="lni-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="speaker-card modern-card wow fadeInUp" data-wow-delay="0.4s">
+                                        <div class="speaker-image">
+                                            <img src="assets/images/speaker_agustina.jpeg" alt="Agustina Disiot">
+                                            <div class="play-overlay">
+                                                <a href="https://www.youtube.com/watch?v=vkuE7elhFcc" target="_blank" class="play-btn">
+                                                    <i class="lni-play"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="speaker-content">
+                                            <h4 class="speaker-name">Agustina Disiot</h4>
+                                            <p class="speaker-title">DCO: Creación de creatives con IA</p>
+                                            <p class="speaker-description">Cómo la IA generativa está revolucionando la creación de contenido publicitario digital.</p>
+                                            <a href="https://www.youtube.com/watch?v=vkuE7elhFcc" target="_blank" class="speaker-link">Ver charla <i class="lni-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="speaker-card modern-card wow fadeInUp" data-wow-delay="0.5s">
+                                        <div class="speaker-image">
+                                            <img src="assets/images/speaker_lucas.jpeg" alt="Lucas Baldezzari">
+                                            <div class="play-overlay">
+                                                <a href="https://youtu.be/jxCfgI-KhHs?si=M3NL5c7Wz27tc3XB" target="_blank" class="play-btn">
+                                                    <i class="lni-play"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="speaker-content">
+                                            <h4 class="speaker-name">Lucas Baldezzari</h4>
+                                            <p class="speaker-title">Interfaces Cerebro Computadora</p>
+                                            <p class="speaker-description">La convergencia entre neurociencia e inteligencia artificial para crear interfaces innovadoras.</p>
+                                            <a href="https://youtu.be/jxCfgI-KhHs?si=M3NL5c7Wz27tc3XB" target="_blank" class="speaker-link">Ver charla <i class="lni-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="speaker-card modern-card wow fadeInUp" data-wow-delay="0.6s">
+                                        <div class="speaker-image">
+                                            <img src="assets/images/speaker_alicia.jpeg" alt="Alicia Cabrera">
+                                            <div class="play-overlay">
+                                                <a href="https://www.youtube.com/watch?v=lZgMG5V2g5c" target="_blank" class="play-btn">
+                                                    <i class="lni-play"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="speaker-content">
+                                            <h4 class="speaker-name">Alicia Cabrera</h4>
+                                            <p class="speaker-title">IAG: Transformando empresas</p>
+                                            <p class="speaker-description">Cómo la IA Generativa está transformando nuestra empresa y la de nuestros clientes.</p>
+                                            <a href="https://www.youtube.com/watch?v=lZgMG5V2g5c" target="_blank" class="speaker-link">Ver charla <i class="lni-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="speaker-card modern-card wow fadeInUp" data-wow-delay="0.7s">
+                                        <div class="speaker-image">
+                                            <img src="assets/images/speaker_ana.jpeg" alt="Ana Lía Villarreal">
+                                            <div class="play-overlay">
+                                                <a href="https://www.youtube.com/watch?v=tMFYepl5swU" target="_blank" class="play-btn">
+                                                    <i class="lni-play"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="speaker-content">
+                                            <h4 class="speaker-name">Ana Lía Villarreal</h4>
+                                            <p class="speaker-title">Nuevas tecnologías como aliadas</p>
+                                            <p class="speaker-description">Empoderando a mi hija con diabetes tipo 1 a través de la tecnología.</p>
+                                            <a href="https://www.youtube.com/watch?v=tMFYepl5swU" target="_blank" class="speaker-link">Ver charla <i class="lni-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="speaker-card modern-card wow fadeInUp" data-wow-delay="0.8s">
+                                        <div class="speaker-image">
+                                            <img src="assets/images/speaker_sebastian.jpeg" alt="Sebastian Diaz">
+                                            <div class="play-overlay">
+                                                <a href="https://www.youtube.com/watch?v=3uscH6SVts8" target="_blank" class="play-btn">
+                                                    <i class="lni-play"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="speaker-content">
+                                            <h4 class="speaker-name">Sebastian Diaz</h4>
+                                            <p class="speaker-title">AI Systems y LLMs</p>
+                                            <p class="speaker-description">Aplicación de LLMs más allá de chatbots en sistemas de inteligencia artificial.</p>
+                                            <a href="https://www.youtube.com/watch?v=3uscH6SVts8" target="_blank" class="speaker-link">Ver charla <i class="lni-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="speaker-card modern-card wow fadeInUp" data-wow-delay="0.9s">
+                                        <div class="speaker-image">
+                                            <img src="assets/images/speaker_agustin.jpeg" alt="Agustín Lucas">
+                                            <div class="play-overlay">
+                                                <a href="https://www.youtube.com/watch?v=oaxJ5uZNbmI" target="_blank" class="play-btn">
+                                                    <i class="lni-play"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="speaker-content">
+                                            <h4 class="speaker-name">Agustín Lucas</h4>
+                                            <p class="speaker-title">Traducción automática guaraní-español</p>
+                                            <p class="speaker-description">Data augmentation para mejorar la traducción automática de lenguas indígenas.</p>
+                                            <a href="https://www.youtube.com/watch?v=oaxJ5uZNbmI" target="_blank" class="speaker-link">Ver charla <i class="lni-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="speaker-card modern-card wow fadeInUp" data-wow-delay="1.0s">
+                                        <div class="speaker-image">
+                                            <img src="assets/images/speaker_angie.jpeg" alt="Angie Lecot">
+                                            <div class="play-overlay">
+                                                <a href="https://www.youtube.com/watch?v=i32EGY9R4P4" target="_blank" class="play-btn">
+                                                    <i class="lni-play"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="speaker-content">
+                                            <h4 class="speaker-name">Angie Lecot</h4>
+                                            <p class="speaker-title">Panel IA Segura</p>
+                                            <p class="speaker-description">Discussión sobre los retos y oportunidades de la Inteligencia Artificial Segura.</p>
+                                            <a href="https://www.youtube.com/watch?v=i32EGY9R4P4" target="_blank" class="speaker-link">Ver charla <i class="lni-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="speaker-card modern-card wow fadeInUp" data-wow-delay="1.1s">
+                                        <div class="speaker-image">
+                                            <img src="assets/images/speaker_ivan.jpeg" alt="Iván Monjardin">
+                                            <div class="play-overlay">
+                                                <a href="https://www.youtube.com/watch?v=vkuE7elhFcc" target="_blank" class="play-btn">
+                                                    <i class="lni-play"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="speaker-content">
+                                            <h4 class="speaker-name">Iván Monjardin</h4>
+                                            <p class="speaker-title">DCO: Creación de creatives con IA</p>
+                                            <p class="speaker-description">Innovación en la creación de contenido publicitario usando inteligencia artificial generativa.</p>
+                                            <a href="https://www.youtube.com/watch?v=vkuE7elhFcc" target="_blank" class="speaker-link">Ver charla <i class="lni-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="speaker-card modern-card wow fadeInUp" data-wow-delay="1.2s">
+                                        <div class="speaker-image">
+                                            <img src="assets/images/speaker_kenji.jpeg" alt="Kenji Nakasone">
+                                            <div class="play-overlay">
+                                                <a href="https://www.youtube.com/watch?v=lZgMG5V2g5c" target="_blank" class="play-btn">
+                                                    <i class="lni-play"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="speaker-content">
+                                            <h4 class="speaker-name">Kenji Nakasone</h4>
+                                            <p class="speaker-title">IAG: Transformando empresas</p>
+                                            <p class="speaker-description">Estrategias de implementación de IA Generativa en entornos empresariales.</p>
+                                            <a href="https://www.youtube.com/watch?v=lZgMG5V2g5c" target="_blank" class="speaker-link">Ver charla <i class="lni-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="speaker-card modern-card wow fadeInUp" data-wow-delay="1.3s">
+                                        <div class="speaker-image">
+                                            <img src="assets/images/speaker_maria_noel.jpeg" alt="Maria Noel Espinosa">
+                                            <div class="play-overlay">
+                                                <a href="https://www.youtube.com/watch?v=e7aVaPqPNo8" target="_blank" class="play-btn">
+                                                    <i class="lni-play"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="speaker-content">
+                                            <h4 class="speaker-name">Maria Noel Espinosa</h4>
+                                            <p class="speaker-title">Soluciones end-to-end de IA</p>
+                                            <p class="speaker-description">Experiencias en el desarrollo de soluciones completas de inteligencia artificial.</p>
+                                            <a href="https://www.youtube.com/watch?v=e7aVaPqPNo8" target="_blank" class="speaker-link">Ver charla <i class="lni-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="speaker-card modern-card wow fadeInUp" data-wow-delay="1.4s">
+                                        <div class="speaker-image">
+                                            <img src="assets/images/speaker_pablo.jpeg" alt="Pablo Blanco">
+                                            <div class="play-overlay">
+                                                <a href="https://www.youtube.com/watch?v=i32EGY9R4P4" target="_blank" class="play-btn">
+                                                    <i class="lni-play"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="speaker-content">
+                                            <h4 class="speaker-name">Pablo Blanco</h4>
+                                            <p class="speaker-title">Panel IA Segura</p>
+                                            <p class="speaker-description">Perspectivas sobre seguridad y ética en sistemas de inteligencia artificial.</p>
+                                            <a href="https://www.youtube.com/watch?v=i32EGY9R4P4" target="_blank" class="speaker-link">Ver charla <i class="lni-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="speaker-card modern-card wow fadeInUp" data-wow-delay="1.5s">
+                                        <div class="speaker-image">
+                                            <img src="assets/images/speaker_lorena.jpeg" alt="Lorena Etcheverry">
+                                            <div class="play-overlay">
+                                                <a href="https://www.youtube.com/watch?v=i32EGY9R4P4" target="_blank" class="play-btn">
+                                                    <i class="lni-play"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="speaker-content">
+                                            <h4 class="speaker-name">Lorena Etcheverry</h4>
+                                            <p class="speaker-title">Panel IA Segura</p>
+                                            <p class="speaker-description">Investigación académica sobre los desafíos de la inteligencia artificial responsable.</p>
+                                            <a href="https://www.youtube.com/watch?v=i32EGY9R4P4" target="_blank" class="speaker-link">Ver charla <i class="lni-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="speaker-card modern-card wow fadeInUp" data-wow-delay="1.6s">
+                                        <div class="speaker-image">
+                                            <img src="assets/images/speaker_alexis.jpeg" alt="Alexis Baladón">
+                                            <div class="play-overlay">
+                                                <a href="https://www.youtube.com/watch?v=oaxJ5uZNbmI" target="_blank" class="play-btn">
+                                                    <i class="lni-play"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="speaker-content">
+                                            <h4 class="speaker-name">Alexis Baladón</h4>
+                                            <p class="speaker-title">Traducción automática guaraní-español</p>
+                                            <p class="speaker-description">Técnicas avanzadas de data augmentation para lenguas con recursos limitados.</p>
+                                            <a href="https://www.youtube.com/watch?v=oaxJ5uZNbmI" target="_blank" class="speaker-link">Ver charla <i class="lni-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="archive-year-actions">
+                            <a class="main-btn main-btn-2 modern-btn" href="https://youtube.com/playlist?list=PLRlkZbaqHfbsPH7mqpamUjnULnA8j2-Ms" target="_blank">
+                                <i class="lni-youtube"></i> Ver todas las charlas 2024
+                            </a>
+                        </div>
                     </div>
-                </div>
+                </details>
             </div>
         </div>
     </section>
-    <!--====== SPEAKERS 2024 PART ENDS ======-->
+    <!--====== SPEAKERS ARCHIVE PART ENDS ======-->
 
     <!--====== FOOTER PART START ======-->
 
@@ -622,7 +948,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="copyright text-center">
-                            <p class="text">© 2025 ConnectIA. Organizado con ❤️ por <a href="https://data-science-uy.github.io/" target="_blank">Data Science UY</a></p>
+                            <p class="text">© 2026 ConnectIA. Organizado con ❤️ por <a href="https://data-science-uy.github.io/" target="_blank">Data Science UY</a></p>
                     </div>
                     </div>
                 </div>
