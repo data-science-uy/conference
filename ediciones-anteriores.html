@@ -212,13 +212,20 @@
             </div>
         </div>
 
-        <div class="header-content-area modern-hero bg_cover d-flex align-items-center" style="background-image: url(assets/images/header-bg.jpg); min-height: 400px;">
+        <div class="header-content-area modern-hero archive-hero bg_cover d-flex align-items-center" style="background-image: url(assets/images/header-bg.jpg); min-height: 400px;">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-10">
                         <div class="header-content text-center">
+                            <div class="hero-badge">
+                                <span class="badge-text">Nuestra historia</span>
+                            </div>
+                            <h2 class="mt-40 modern-subtitle">Revisá nuestra historia</h2>
                             <h1 class="header-title modern-title">Ediciones <span class="highlight">Anteriores</span></h1>
-                            <h2 class="sub-title modern-subtitle">Reviví lo que pasó y descubrí lo que se viene en ConnectIA</h2>
+                            <h2 class="sub-title modern-subtitle">Reviví lo que pasó en ConnectIA</h2>
+                            <ul class="header-btn">
+                                <li><a class="main-btn modern-btn hero-cta" href="#gallery-2024">VER FOTOS Y SPEAKERS</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -338,7 +345,7 @@
                     <summary>
                         <div class="archive-year-header">
                             <div>
-                                <span class="archive-year-label">Visible ahora</span>
+                                <span class="archive-year-label">Más reciente</span>
                                 <h3>Speakers 2025</h3>
                                 <p>La segunda edición reunió charlas técnicas, paneles y casos de uso aplicados en IA.</p>
                             </div>
@@ -553,7 +560,7 @@
                     <summary>
                         <div class="archive-year-header">
                             <div>
-                                <span class="archive-year-label">Oculto por defecto</span>
+                                <span class="archive-year-label">Primera edición</span>
                                 <h3>Speakers 2024</h3>
                                 <p>La primera edición reunió referentes de la industria, academia y comunidad técnica en Uruguay.</p>
                             </div>
@@ -887,48 +894,20 @@
     <!--====== FOOTER PART START ======-->
 
     <section id="footer" class="footer-area modern-footer bg_cover" style="background-image: url(assets/images/footer.jpg)">
-        <!-- footer subscribe
-        <div class="footer-subscribe-area pt-120 pb-130">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="footer-subscribe text-center">
-                            <h2 class="subscribe-title">Subscribe Now</h2>
-                            <div class="subscribe-form mt-45">
-                                <form action="#">
-                                    <input type="email" placeholder="Enter Your Email">
-                                    <button class="main-btn">Subscribe Now</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        -->
-        
         <div class="footer-widget">
             <div class="container">
                 <div class="widget pt-60 pb-80">
-                    <div class="row">
+                    <div class="row align-items-center">
                         <div class="col-lg-4">
-                            <div class="footer-address mt-40">
-                                <h5 class="f-title" style="font-size: 24px;text-align: center;">Organiza</h5>
-                                <figure style="width: 118px; margin: 0 auto;display: block;margin-top: 15px;">
-                                    <a target="_blank" href="https://data-science-uy.github.io/">
-                                        <img src="assets/images/white-sm.png" alt="Data Science Logo" style="height:60px;width:auto;margin: 0 auto;display: block;margin-top: 15px;">
-                                    </a>
-                                </figure>
-                        </div>
+                            <img src="assets/images/logoMec2.png" alt="Declarado de interés ministerial" style="height: 80px; width: auto; margin: 0 auto; margin-top: 60px; display: block;">
                         </div>
                         <div class="col-lg-4">
                             <div class="footer-contact mt-40">
-                                <h5 class="f-title" style="font-size: 24px;text-align: center; margin-bottom: 28px;">
-                                    ¡Contáctanos!</h5>
+                                <h5 class="f-title" style="font-size: 24px;text-align: center; margin-bottom: 28px;">¡Contáctanos!</h5>
                                 <ul class="social" style="display: block; margin: 20px auto; width: fit-content;">
                                     <li><a target="_blank" href="https://www.linkedin.com/company/connectiauy/"><i class="lni-linkedin-original"></i></a></li>
                                     <li><a href="https://www.meetup.com/montevideo-applied-data-science-and-big-data/"><svg height="16" viewBox="-23.1 0 997.9 826.1" width="16" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="m879 678.2c37.4 5.2 74.3 10.3 80.2 47.9 15.6 100-178.3 62.8-222.7 41.1-69.5-34.1-111.7-112-93.6-188.9 6.9-29.7 44.6-106.7 80-179.2 33.2-67.9 64.4-131.8 66.8-149.2 4.8-36.9-14.8-40-27.1-40.6-15.8-.8-28.3 6.9-43.8 30.3-9.8 14.7-88.6 171-141.2 275.5-23.9 47.3-42.3 84-46.7 92.1-24.8 46.8-56 58.1-87.3 56.4-45.8-2.4-66.7-26.9-60.1-71 1.8-11.8 24.1-66.4 48.2-125.4 28.4-69.8 59.5-145.8 62.3-165.2 3.2-22.1-1.2-45.5-23-56.7-22-11.3-47.8 5.9-55.6 19-5.1 8.6-40.3 98.1-77.4 192.5-41 104.1-84.3 214.1-92.3 228.6-26.4 48.2-54.3 63.5-96.2 65.5-99.1 4.7-172.6-76.9-140.2-176.8 2.7-8.3 8.1-26.6 15.6-51.6 32.7-109.6 103.3-346.5 142.6-416.5 32.5-57.8 122.8-101.6 185.4-74.5 20.5 8.9 46.1 21.1 65.4 30.4 11.2 5.4 20.3 9.7 25.1 11.9 26.8 11.9 55.3-14.8 70.6-29.2 2.2-2 4.1-3.8 5.7-5.2q2.3-2 4.5-4c11.4-10 22.7-19.9 36.6-25.8 15.7-6.8 40.4-9.6 59.5-6.8 19.2 2.8 30.6 10.1 37.7 15.8 11.8 9.4 19.8 17.1 29.9 26.8l6.2 5.9c18.4 17.5 32 9.2 41.9 3.2l2.6-1.5.5-.3c17.1-10 30.9-18 81.8-17.1 52.9.9 113.7 19.9 126.4 110.1 6.8 48.7-31.7 134.6-71.7 223.9-42.4 94.5-86.4 192.8-80 254.4 4.6 43.3 44.2 48.8 83.4 54.2z" fill="#ff1154"></path>
+                                                <path d="m879 678.2c37.4 5.2 74.3 10.3 80.2 47.9 15.6 100-178.3 62.8-222.7 41.1-69.5-34.1-111.7-112-93.6-188.9 6.9-29.7 44.6-106.7 80-179.2 33.2-67.9 64.4-131.8 66.8-149.2 4.8-36.9-14.8-40-27.1-40.6-15.8-.8-28.3 6.9-43.8 30.3-9.8 14.7-88.6 171-141.2 275.5-23.9 47.3-42.3 84-46.7 92.1-24.8 46.8-56 58.1-87.3 56.4-45.8-2.4-66.7-26.9-60.1-71 1.8-11.8 24.1-66.4 48.2-125.4 28.4-69.8 59.5-145.8 62.3-165.2 3.2-22.1-1.2-45.5-23-56.7-22-11.3-47.8 5.9-55.6 19-5.1 8.6-40.3 98.1-77.4 192.5-41 104.1-84.3 214.1-92.3 228.6-26.4 48.2-54.3 63.5-96.2 65.5-99.1 4.7-172.6-76.9-140.2-176.8 2.7-8.3 8.1-26.6 15.6-51.6 32.7-109.6 103.3-346.5 142.6-416.5 32.5-57.8 122.8-101.6 185.4-74.5 20.5 8.9 46.1 21.1 65.4 30.4 11.2 5.4 20.3 9.7 25.1 11.9 26.8 11.9 55.3-14.8 70.6-29.2 2.2-2 4.1-3.8 5.7-5.2q2.3-2 4.5-4c11.4-10 22.7-19.9 36.6-25.8 15.7-6.8 40.4-9.6 59.5-6.8 19.2 2.8 30.6 10.1 37.7 15.8 11.8 9.4 19.8 17.1 29.9 26.8l6.2 5.9c18.4 17.5 32 9.2 41.9 3.2l2.6-1.5.5-.3c17.1-10 30.9-18 81.8-17.1 52.9.9 113.7 19.9 126.4 110.1 6.8 48.7-31.7 134.6-71.7 223.9-42.4 94.5-86.4 192.8-80 254.4 4.6 43.3 44.2 48.8 83.4 54.2z" fill="#ffffff"></path>
                                             </svg></a></li>
                                     <li><a target="_blank" href="https://www.instagram.com/connectiauy/"><i class="lni-instagram-original"></i></a></li>
                                     <li><a target="_blank" href="mailto:info@connectia.uy"><i class="lni-envelope"></i></a></li>
@@ -936,20 +915,20 @@
                             </div>
                         </div>
                         <div class="col-lg-4">
-                            <img src="assets/images/logoMec2.png" alt="Declarado de interés ministerial" style="height: 80px; width: auto; margin: 0 auto; margin-top: 60px; display: block;">
+                            <img src="assets/images/anii-apoyo.png" alt="Declarado de interés por la ANII" style="height: 80px; width: auto; margin: 0 auto; margin-top: 60px; display: block;">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        
+
         <div class="footer-copyright">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="copyright text-center">
                             <p class="text">© 2026 ConnectIA. Organizado con ❤️ por <a href="https://data-science-uy.github.io/" target="_blank">Data Science UY</a></p>
-                    </div>
+                        </div>
                     </div>
                 </div>
             </div>
