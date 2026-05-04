@@ -78,6 +78,7 @@
     background: linear-gradient(135deg, rgba(16, 43, 175, 0.9) 0%, rgba(22, 100, 255, 0.9) 50%, rgba(16, 43, 175, 0.9) 100%), url('../images/header-bg.jpg');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
 }
 
 .modern-hero::before {
@@ -1926,6 +1927,22 @@ body {
 
 .archive-hero {
     min-height: 420px !important;
+}
+
+.archive-hero::before {
+    background: rgba(0, 0, 0, 0.5) !important;
+}
+
+.nosotros-hero::before {
+    background: rgba(0, 0, 0, 0.3) !important;
+}
+
+.home-hero::before {
+    background: rgba(0, 0, 0, 0.45) !important;
+}
+
+.meetups-hero::before {
+    background: rgba(0, 0, 0, 0.15) !important;
 }
 
 .archive-hero .row,
