@@ -1,4 +1,5 @@
 *.DS_Store
 
+.vscode/
 assets/.DS_Store
 assets/images/.DS_Store
