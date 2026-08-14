@@ -373,11 +373,18 @@
     align-items: center;
     justify-content: center;
     margin-right: 20px;
+    flex-shrink: 0;
 }
 
 .info-icon i {
     color: white;
     font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    line-height: 1;
 }
 
 .info-content h4 {
@@ -609,6 +616,183 @@
     font-weight: 600;
 }
 
+.detail-card h5 i {
+    color: var(--primary-color);
+    margin-right: 8px;
+    font-size: 1.1rem;
+    vertical-align: middle;
+}
+
+/* ========================================
+   EVENT DATE DISPLAY (HERO)
+======================================== */
+.event-date-display {
+    display: inline-flex;
+    align-items: center;
+    gap: 24px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 20px;
+    padding: 28px 48px;
+    margin: 28px auto 36px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 12px 32px rgba(9, 22, 74, 0.15);
+}
+
+.event-date-display .date-day {
+    font-size: 5rem;
+    font-weight: 800;
+    color: var(--accent-color);
+    line-height: 1;
+    font-family: 'Inter', sans-serif;
+}
+
+.event-date-display .date-details {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 6px;
+}
+
+.event-date-display .date-month {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.2;
+}
+
+.event-date-display .date-location {
+    font-size: 1.15rem;
+    color: rgba(255, 255, 255, 0.82);
+    line-height: 1.3;
+}
+
+.hero-cta-secondary {
+    background: rgba(255, 255, 255, 0.12) !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.28) !important;
+    box-shadow: none !important;
+    background-size: auto !important;
+    background-position: center !important;
+}
+
+.header-btn .hero-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    padding: 13px 28px !important;
+    line-height: 1.25 !important;
+    border-radius: 999px;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+    transition: var(--transition);
+}
+
+.header-btn .hero-cta:hover,
+.header-btn .hero-cta:focus {
+    transform: translateY(-2px);
+}
+
+.header-btn .hero-cta:not(.hero-cta-secondary):hover,
+.header-btn .hero-cta:not(.hero-cta-secondary):focus {
+    color: #16213d;
+    box-shadow: 0 18px 36px rgba(9, 22, 74, 0.22);
+}
+
+.header-btn .hero-cta-secondary:hover,
+.header-btn .hero-cta-secondary:focus {
+    background: rgba(255, 255, 255, 0.2) !important;
+    color: #ffffff !important;
+    box-shadow: 0 18px 36px rgba(9, 22, 74, 0.22);
+}
+
+/* ========================================
+   CALL FOR SPEAKERS BANNER
+======================================== */
+.cfs-banner {
+    background: linear-gradient(135deg, #0d2390 0%, #1664ff 55%, #102baf 100%);
+    border-radius: var(--border-radius);
+    padding: 48px 40px;
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(12, 28, 88, 0.18);
+}
+
+.cfs-banner::before {
+    content: '';
+    position: absolute;
+    top: -40%;
+    right: -10%;
+    width: 280px;
+    height: 280px;
+    background: rgba(255, 193, 7, 0.12);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.cfs-badge {
+    display: inline-block;
+    background: rgba(255, 193, 7, 0.95);
+    color: #16213d;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 6px 16px;
+    border-radius: 999px;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.cfs-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 16px;
+    position: relative;
+    z-index: 1;
+}
+
+.cfs-text {
+    color: rgba(255, 255, 255, 0.88) !important;
+    max-width: 640px;
+    margin: 0 auto 28px;
+    line-height: 1.7;
+    position: relative;
+    z-index: 1;
+}
+
+.cfs-cta {
+    background: rgba(255, 193, 7, 0.96) !important;
+    color: #16213d !important;
+    position: relative;
+    z-index: 1;
+}
+
+.cfs-cta:hover,
+.cfs-cta:focus {
+    color: #16213d !important;
+    box-shadow: 0 18px 36px rgba(9, 22, 74, 0.22) !important;
+}
+
+.cfs-deadline {
+    margin: 20px 0 0;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.75);
+    position: relative;
+    z-index: 1;
+}
+
+.cfs-deadline strong {
+    color: rgba(255, 255, 255, 0.95);
+}
+
 /* ========================================
    MODERN FOOTER
 ======================================== */
@@ -825,8 +1009,9 @@ h3 {
         text-align: center;
     }
     
-    .info-icon {
+    .info-card .info-icon {
         margin: 0 auto 15px auto;
+        flex-shrink: 0;
     }
     
     .gallery-grid {
@@ -1819,7 +2004,7 @@ body {
 }
 
 .location-icon,
-.info-icon {
+.info-card .info-icon {
     margin-right: 18px;
     margin-bottom: 0;
 }
@@ -1832,6 +2017,12 @@ body {
     background: none;
     -webkit-text-fill-color: currentColor;
     font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    line-height: 1;
 }
 
 .features-title,
@@ -2035,5 +2226,47 @@ body {
         min-height: 48px;
         padding: 12px 22px;
         font-size: 14px;
+    }
+
+    .header-btn .hero-cta {
+        min-height: 48px;
+        padding: 12px 22px !important;
+        font-size: 14px;
+    }
+
+    .hero-badge {
+        display: none;
+    }
+
+    .modern-hero .header-content {
+        padding-top: 72px;
+    }
+
+    .event-date-display {
+        padding: 22px 28px;
+        gap: 18px;
+        width: 100%;
+        max-width: 360px;
+        justify-content: center;
+    }
+
+    .event-date-display .date-day {
+        font-size: 4rem;
+    }
+
+    .event-date-display .date-month {
+        font-size: 1.35rem;
+    }
+
+    .event-date-display .date-location {
+        font-size: 1rem;
+    }
+
+    .cfs-banner {
+        padding: 32px 24px;
+    }
+
+    .cfs-title {
+        font-size: 1.3rem;
     }
 }
