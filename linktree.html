@@ -126,6 +126,11 @@
       box-shadow: 0 18px 38px rgba(8, 12, 49, 0.2);
     }
 
+    .link-card--static:hover {
+      transform: none;
+      box-shadow: var(--shadow);
+    }
+
     .link-icon {
       width: 58px;
       height: 58px;
@@ -173,6 +178,22 @@
       color: var(--card-muted);
       font-size: 0.89rem;
       line-height: 1.48;
+    }
+
+    .availability-note {
+      display: inline-block;
+      margin-top: 10px;
+      color: var(--bg);
+      font-weight: 700;
+    }
+
+    .event-detail {
+      display: block;
+    }
+
+    .event-summary {
+      display: block;
+      margin-top: 6px;
     }
 
     .link-arrow {
@@ -280,11 +301,19 @@
       },
       links: [
         {
-          title: "Meetup #19 | Thu, Jun 11, 2026, 6:30 PM",
-          description: "Reservá tu lugar para el próximo encuentro de la comunidad.",
-          url: "https://www.meetup.com/connectia/events/314929461/",
-          tag: "Próximo evento",
-          icon: "meetup"
+          title: "ConnectIA Conference",
+          description: "<span class=\"event-detail\">📅 Sábado 31 de octubre</span><span class=\"event-detail\">📍 Auditorio del LATU</span><span class=\"availability-note\">Inscripciones próximamente</span><span class=\"event-summary\">Un evento gratuito que reúne a profesionales, académicos y estudiantes.</span>",
+          url: "",
+          tag: "ConnectIA Conference",
+          icon: "pin",
+          statusIcon: "hourglass"
+        },
+        {
+          title: "Call for Speakers abierto",
+          description: "Postulá tu charla: ser speaker no tiene costo ni requiere sponsorship. Seleccionamos propuestas por su valor para la comunidad.",
+          url: "https://sessionize.com/connectia2026",
+          tag: "ConnectIA Conference",
+          icon: "microphone"
         },
         {
           title: "Instagram",
@@ -306,7 +335,7 @@
           url: "https://connectia.uy",
           tag: "Oficial",
           icon: "globe"
-        }
+        },
       ]
     };
 
@@ -338,9 +367,26 @@
           <path d="M14.4 15c1.5.2 2.7 1.2 3.3 2.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/>
         </svg>
       `,
+      pin: `
+        <svg width="25" height="25" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M12 21s6.5-5.7 6.5-11.1A6.5 6.5 0 1 0 5.5 9.9C5.5 15.3 12 21 12 21z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+          <circle cx="12" cy="9.8" r="2.25" stroke="currentColor" stroke-width="2"/>
+        </svg>
+      `,
+      microphone: `
+        <svg width="25" height="25" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <rect x="8" y="3" width="8" height="12" rx="4" stroke="currentColor" stroke-width="2"/>
+          <path d="M5.5 11.5a6.5 6.5 0 0 0 13 0M12 18v3M8.5 21h7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      `,
       arrow: `
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
           <path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      `,
+      hourglass: `
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M6 2v6h.01L10 12l-3.99 4H6v6h12v-6h-.01L14 12l3.99-4H18V2H6Zm10 14v4H8v-4l4-4 4 4ZM12 10 8 6V4h8v2l-4 4Z" fill="currentColor"/>
         </svg>
       `
     };
@@ -361,11 +407,13 @@
 
     const linksList = document.getElementById("links-list");
     links.forEach((item) => {
-      const card = document.createElement("a");
-      card.className = "link-card";
-      card.href = item.url;
-      card.target = item.url.startsWith("http") ? "_blank" : "_self";
-      card.rel = item.url.startsWith("http") ? "noreferrer" : "";
+      const card = document.createElement(item.url ? "a" : "div");
+      card.className = `link-card${item.url ? "" : " link-card--static"}`;
+      if (item.url) {
+        card.href = item.url;
+        card.target = item.url.startsWith("http") ? "_blank" : "_self";
+        card.rel = item.url.startsWith("http") ? "noreferrer" : "";
+      }
 
       const icon = document.createElement("div");
       icon.className = "link-icon";
@@ -383,7 +431,14 @@
       arrow.className = "link-arrow";
       arrow.innerHTML = icons.arrow;
 
-      card.append(icon, copy, arrow);
+      card.append(icon, copy);
+      if (item.url) {
+        card.appendChild(arrow);
+      } else if (item.statusIcon) {
+        arrow.innerHTML = icons[item.statusIcon];
+        arrow.setAttribute("aria-label", "Inscripciones próximamente");
+        card.appendChild(arrow);
+      }
       linksList.appendChild(card);
     });
 
