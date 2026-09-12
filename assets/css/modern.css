@@ -2270,3 +2270,72 @@ body {
         font-size: 1.3rem;
     }
 }
+
+/* ========================================
+   SPONSORS 2026
+   Los logos son versiones blancas sobre transparente,
+   por eso cada tile va sobre fondo oscuro.
+======================================== */
+.sponsors-2026 .sponsor-tier {
+    margin-top: 60px;
+}
+
+.sponsors-2026 .sponsor-tier .tier-title {
+    margin-bottom: 30px;
+    color: var(--text-muted);
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.sponsors-2026 .sponsor-tile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    padding: 26px 30px;
+    background: var(--dark-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+    transition: var(--transition);
+}
+
+.sponsors-2026 a.sponsor-tile:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+}
+
+/* Los PNG vienen normalizados a un lienzo 3:1, asi que
+   el ancho alcanza para igualar el peso optico de cada marca. */
+.sponsors-2026 .sponsor-tile img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Jerarquia por nivel */
+.sponsors-2026 .sponsor-tier--black .sponsor-tile {
+    padding: 34px 40px;
+}
+
+.sponsors-2026 .sponsor-tier--gold .sponsor-tile img {
+    width: 86%;
+}
+
+.sponsors-2026 .sponsor-tier--silver .sponsor-tile img {
+    width: 76%;
+}
+
+@media (max-width: 767px) {
+    .sponsors-2026 .sponsor-tier {
+        margin-top: 45px;
+    }
+
+    .sponsors-2026 .sponsor-tile,
+    .sponsors-2026 .sponsor-tier--black .sponsor-tile {
+        padding: 22px 26px;
+    }
+}
