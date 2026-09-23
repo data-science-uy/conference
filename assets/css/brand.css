@@ -1,0 +1,560 @@
+/* ========================================
+   CONNECTIA BRAND — Identidad visual 2026
+   Fuente de verdad de color y tipografía.
+   Se carga después de style.css y modern.css.
+======================================== */
+
+:root {
+    /* Primarios */
+    --primary-color: #223CCF;
+    --primary-deep: #1B2FA6;
+    --secondary-color: #4A5ECD;
+    --accent-color: #FFC008;
+
+    /* Secundarios */
+    --brand-green: #00AD82;
+    --brand-magenta: #C43EB7;
+
+    /* Neutrales */
+    --dark-color: #222222;
+    --text-color: #222222;
+    --text-muted: #515151;
+    --border-neutral: #D9D9D9;
+    --light-color: #F2F2F2;
+    --white: #FFFFFF;
+
+    /* Gradientes */
+    --primary-gradient: linear-gradient(135deg, #223CCF 0%, #4A5ECD 100%);
+    --gradient-green: linear-gradient(135deg, #223CCF 0%, #00AD82 100%);
+    --gradient-yellow: linear-gradient(135deg, #223CCF 0%, #FFC008 100%);
+    --gradient-magenta: linear-gradient(135deg, #C43EB7 0%, #00AD82 100%);
+
+    /* Tipografía */
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+}
+
+/* ========================================
+   TIPOGRAFÍA
+======================================== */
+body,
+.text,
+p {
+    font-family: var(--font-body);
+    color: var(--text-color);
+}
+
+h1, h2, h3, h4, h5, h6,
+.modern-title,
+.section-title,
+.features-title,
+.tier-title {
+    font-family: var(--font-heading);
+}
+
+.modern-title {
+    color: var(--dark-color);
+}
+
+/* El nombre de marca nunca se parte entre renglones */
+.brand-word {
+    white-space: nowrap;
+}
+
+.modern-subtitle {
+    font-family: var(--font-body);
+    color: var(--text-muted);
+}
+
+/* Items especiales: fechas, contadores, etiquetas */
+.section-subtitle,
+.countdown-number,
+.counter-number,
+.meetup-stat-number,
+.mono {
+    font-family: var(--font-mono);
+    letter-spacing: 0.02em;
+}
+
+/* ========================================
+   ÍCONOS DE MARCA
+   Línea amarilla sobre tile azul, como la carta.
+======================================== */
+.modern-card .features-icon,
+.benefit-icon,
+.location-icon,
+.info-icon,
+.host-join-icon-wrap {
+    background: var(--primary-gradient);
+    box-shadow: 0 10px 24px rgba(34, 60, 207, 0.22);
+}
+
+.brand-icon {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* En texto, el ícono amarillo necesita su tile azul para leerse */
+.brand-icon--inline {
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    padding: 0.22em;
+    margin-right: 0.5em;
+    vertical-align: -0.6em;
+    background: var(--primary-gradient);
+    border-radius: 0.5em;
+}
+
+.why-join-item .brand-icon--inline {
+    width: 2.6em;
+    height: 2.6em;
+    flex-shrink: 0;
+    vertical-align: middle;
+}
+
+/* Los tiles rotan entre los tres colores de la carta */
+.features-area .col-lg-4:nth-of-type(3n+2) .features-icon,
+.sponsor-benefits .col-md-4:nth-of-type(3n+2) .benefit-icon,
+.call-details .col-lg-4:nth-of-type(3n+2) .brand-icon--inline,
+.why-join-item:nth-of-type(3n+2) .brand-icon--inline {
+    background: linear-gradient(135deg, #00AD82 0%, #1FC9A0 100%);
+    box-shadow: 0 10px 24px rgba(0, 173, 130, 0.24);
+}
+
+.features-area .col-lg-4:nth-of-type(3n) .features-icon,
+.sponsor-benefits .col-md-4:nth-of-type(3n) .benefit-icon,
+.call-details .col-lg-4:nth-of-type(3n) .brand-icon--inline,
+.why-join-item:nth-of-type(3n) .brand-icon--inline {
+    background: linear-gradient(135deg, #C43EB7 0%, #D869CB 100%);
+    box-shadow: 0 10px 24px rgba(196, 62, 183, 0.24);
+}
+
+/* ========================================
+   NIVELES DE PATROCINIO
+   Platinum azul · Gold magenta · Silver verde · Black ink
+======================================== */
+.sponsors-2026 .sponsor-tier .tier-title {
+    font-family: var(--font-mono);
+    color: var(--text-muted);
+}
+
+.sponsors-2026 .sponsor-tier .tier-title::after {
+    content: '';
+    display: block;
+    width: 48px;
+    height: 3px;
+    margin: 12px auto 0;
+    border-radius: 3px;
+    background: var(--primary-color);
+}
+
+.sponsors-2026 .sponsor-tier--black .tier-title::after {
+    background: var(--dark-color);
+}
+
+.sponsors-2026 .sponsor-tier--platinum .tier-title::after {
+    background: var(--primary-gradient);
+}
+
+.sponsors-2026 .sponsor-tier--gold .tier-title::after {
+    background: var(--brand-magenta);
+}
+
+.sponsors-2026 .sponsor-tier--silver .tier-title::after {
+    background: var(--brand-green);
+}
+
+/* Los logos son versiones blancas: cada nivel lleva su color de marca.
+   Solo el nivel Black queda en ink. */
+.sponsors-2026 .sponsor-tier--platinum .sponsor-tile {
+    background: linear-gradient(135deg, #223CCF 0%, #4A5ECD 100%);
+}
+
+.sponsors-2026 .sponsor-tier--gold .sponsor-tile {
+    background: linear-gradient(135deg, #C43EB7 0%, #A9339E 100%);
+}
+
+.sponsors-2026 .sponsor-tier--silver .sponsor-tile {
+    background: linear-gradient(135deg, #00AD82 0%, #00926E 100%);
+}
+
+.sponsors-2026 .sponsor-tier--black .sponsor-tile {
+    background: var(--dark-color);
+}
+
+/* ========================================
+   ESFERAS DECORATIVAS
+   Pares de esferas 3D sobre los bloques azules,
+   como en las aplicaciones de la carta.
+======================================== */
+.navbar-area .container,
+.modern-footer .footer-widget .container,
+.meetup-carousel-section .container {
+    position: relative;
+}
+
+.modern-footer {
+    overflow: hidden;
+}
+
+.navbar-area .container::before,
+.navbar-area .container::after,
+.modern-footer .footer-widget .container::before,
+.modern-footer .footer-widget .container::after,
+.meetup-carousel-section .container::before,
+.cfs-banner::after {
+    content: '';
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.navbar-area .container > *,
+.modern-footer .footer-widget .container > *,
+.meetup-carousel-section .container > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Menú flotante: esferas asomando por los bordes, fuera del área de contenido */
+@media (min-width: 992px) {
+    .navbar-area {
+        overflow: hidden;
+    }
+
+    .navbar-area .container::before {
+        top: -40px;
+        bottom: -40px;
+        left: calc(50% - 50vw);
+        width: 100vw;
+        background-image:
+            url('../images/brand/sphere-green.png'),
+            url('../images/brand/sphere-yellow.png');
+        background-size: 104px 104px, 72px 72px;
+        background-position:
+            -34px 6px,
+            calc(100% - 46px) -30px;
+        filter: blur(1px);
+    }
+
+    .navbar-area .container::after {
+        top: -40px;
+        bottom: -48px;
+        left: calc(50% - 50vw);
+        width: 100vw;
+        background-image:
+            url('../images/brand/sphere-magenta.png'),
+            url('../images/brand/sphere-yellow.png');
+        background-size: 88px 88px, 136px 136px;
+        background-position:
+            right -28px bottom 16px,
+            left 30% bottom -70px;
+        filter: blur(2px);
+    }
+}
+
+.cfs-banner::before {
+    background: url('../images/brand/sphere-yellow.png') no-repeat center / contain !important;
+    width: 128px !important;
+    height: 128px !important;
+    top: -30px !important;
+    right: -30px !important;
+    border-radius: 0 !important;
+}
+
+.cfs-banner::after {
+    background-image: url('../images/brand/sphere-magenta.png');
+    width: 104px;
+    height: 104px;
+    bottom: -28px;
+    left: -26px;
+    filter: blur(2px);
+}
+
+.meetup-carousel-section .container::before {
+    background-image: url('../images/brand/sphere-magenta.png');
+    width: 150px;
+    height: 150px;
+    top: -34px;
+    right: calc(50% - 50vw - 58px);
+    filter: blur(2px);
+}
+
+/* Desfasadas respecto a las del menú, para que no queden espejadas
+   cuando header y footer se ven juntos. */
+.modern-footer .footer-widget .container::before {
+    top: 0;
+    bottom: 0;
+    left: calc(50% - 50vw);
+    width: 100vw;
+    background-image:
+        url('../images/brand/sphere-yellow.png'),
+        url('../images/brand/sphere-magenta.png');
+    background-size: 118px 118px, 104px 104px;
+    background-position:
+        calc(0% - 44px) 96%,
+        18% -32%;
+    filter: blur(2px);
+}
+
+.modern-footer .footer-widget .container::after {
+    background-image: url('../images/brand/sphere-green.png');
+    width: 140px;
+    height: 140px;
+    top: 38%;
+    right: calc(50% - 50vw - 74px);
+    filter: blur(1px);
+}
+
+@media (max-width: 991px) {
+    .modern-footer .footer-widget .container::before,
+    .modern-footer .footer-widget .container::after,
+    .meetup-carousel-section .container::before {
+        display: none;
+    }
+
+    .cfs-banner::before,
+    .cfs-banner::after {
+        width: 110px !important;
+        height: 110px !important;
+    }
+}
+
+/* Esferas de fondo en secciones claras: muy difusas, sin competir con el texto */
+.features-area,
+.client-area,
+.about-area {
+    position: relative;
+    overflow: hidden;
+}
+
+.features-area::after,
+.client-area::after,
+.about-area::after {
+    content: '';
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.22;
+    filter: blur(6px);
+}
+
+.features-area::after {
+    background-image: url('../images/brand/sphere-magenta.png');
+    width: 240px;
+    height: 240px;
+    top: 8%;
+    left: calc(50% - 50vw - 90px);
+}
+
+.client-area::after {
+    background-image: url('../images/brand/sphere-green.png');
+    width: 210px;
+    height: 210px;
+    bottom: 10%;
+    right: calc(50% - 50vw - 80px);
+}
+
+.about-area::after {
+    background-image: url('../images/brand/sphere-yellow.png');
+    width: 190px;
+    height: 190px;
+    top: 14%;
+    right: calc(50% - 50vw - 72px);
+}
+
+.features-area .container,
+.client-area .container,
+.about-area .container,
+.sponsors-2026 .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Sponsors: constelación de esferas de fondo */
+.sponsors-2026 {
+    position: relative;
+    overflow: hidden;
+}
+
+.sponsors-2026::before,
+.sponsors-2026::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background-repeat: no-repeat;
+}
+
+.sponsors-2026::before {
+    opacity: 0.24;
+    filter: blur(6px);
+    background-image:
+        url('../images/brand/sphere-magenta.png'),
+        url('../images/brand/sphere-green.png'),
+        url('../images/brand/sphere-yellow.png');
+    background-size: 200px 200px, 140px 140px, 116px 116px;
+    background-position:
+        calc(0% - 72px) 14%,
+        calc(100% + 52px) 46%,
+        calc(0% - 44px) 82%;
+}
+
+.sponsors-2026::after {
+    opacity: 0.16;
+    filter: blur(10px);
+    background-image:
+        url('../images/brand/sphere-green.png'),
+        url('../images/brand/sphere-magenta.png');
+    background-size: 250px 250px, 170px 170px;
+    background-position:
+        calc(100% + 96px) 4%,
+        calc(100% + 40px) 92%;
+}
+
+@media (max-width: 991px) {
+    .sponsors-2026::before,
+    .sponsors-2026::after {
+        display: none;
+    }
+}
+
+/* Ediciones anteriores y Nosotros */
+.gallery-2024-area,
+.speakers-2024-area,
+.mission-area,
+.team-area {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-2024-area::after,
+.speakers-2024-area::after,
+.mission-area::after,
+.team-area::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background-repeat: no-repeat;
+    opacity: 0.22;
+    filter: blur(6px);
+}
+
+.gallery-2024-area .container,
+.speakers-2024-area .container,
+.mission-area .container,
+.team-area .container {
+    position: relative;
+    z-index: 1;
+}
+
+.gallery-2024-area::after {
+    background-image:
+        url('../images/brand/sphere-yellow.png'),
+        url('../images/brand/sphere-green.png');
+    background-size: 210px 210px, 150px 150px;
+    background-position:
+        calc(0% - 80px) 16%,
+        calc(100% + 56px) 78%;
+}
+
+.speakers-2024-area::after {
+    background-image:
+        url('../images/brand/sphere-magenta.png'),
+        url('../images/brand/sphere-green.png'),
+        url('../images/brand/sphere-yellow.png');
+    background-size: 230px 230px, 170px 170px, 130px 130px;
+    background-position:
+        calc(100% + 86px) 8%,
+        calc(0% - 64px) 44%,
+        calc(100% + 40px) 88%;
+}
+
+.mission-area::after {
+    background-image: url('../images/brand/sphere-magenta.png');
+    background-size: 190px 190px;
+    background-position: calc(100% + 68px) 24%;
+}
+
+.team-area::after {
+    background-image:
+        url('../images/brand/sphere-green.png'),
+        url('../images/brand/sphere-yellow.png');
+    background-size: 220px 220px, 140px 140px;
+    background-position:
+        calc(0% - 78px) 22%,
+        calc(100% + 48px) 74%;
+}
+
+@media (max-width: 991px) {
+    .gallery-2024-area::after,
+    .speakers-2024-area::after,
+    .mission-area::after,
+    .team-area::after {
+        display: none;
+    }
+}
+
+/* Convocatoria cerrada */
+.cfs-badge--closed {
+    background: rgba(255, 255, 255, 0.16) !important;
+    color: rgba(255, 255, 255, 0.92) !important;
+    border: 1px solid rgba(255, 255, 255, 0.28);
+}
+
+@media (max-width: 991px) {
+    .features-area::after,
+    .client-area::after,
+    .about-area::after {
+        display: none;
+    }
+}
+
+/* ========================================
+   HEROES — tinte azul de marca sobre la foto
+======================================== */
+.home-hero::before {
+    background: linear-gradient(135deg, rgba(27, 47, 166, 0.55) 0%, rgba(34, 34, 34, 0.6) 100%) !important;
+}
+
+.nosotros-hero::before,
+.archive-hero::before {
+    background: linear-gradient(135deg, rgba(34, 60, 207, 0.78) 0%, rgba(27, 47, 166, 0.68) 100%) !important;
+}
+
+.meetups-hero::before {
+    background: linear-gradient(135deg, rgba(34, 60, 207, 0.62) 0%, rgba(27, 47, 166, 0.5) 100%) !important;
+}
+
+/* ========================================
+   SECCIONES OSCURAS — texto legible
+======================================== */
+.meetup-carousel-section .section-title .text {
+    color: rgba(255, 255, 255, 0.72) !important;
+}
+
+.modern-hero .modern-subtitle,
+.modern-hero .header-content .text {
+    color: rgba(255, 255, 255, 0.82) !important;
+}
+
+/* ========================================
+   FOOTER — bloque azul de marca
+======================================== */
+.modern-footer::after {
+    background: rgba(34, 60, 207, 0.92) !important;
+}
+
+.modern-footer .copyright .text {
+    color: rgba(255, 255, 255, 0.75) !important;
+}

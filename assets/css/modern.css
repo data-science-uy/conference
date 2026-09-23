@@ -7,11 +7,11 @@
    MODERN VARIABLES & BASE STYLES
 ======================================== */
 :root {
-    --primary-gradient: radial-gradient(circle at 30% 50%, #1664ff, #102baf, #2563eb);
-    --primary-color: #1664ff;
-    --secondary-color: #102baf;
-    --accent-color: #ffc107;
-    --dark-color: #1a1a2e;
+    --primary-gradient: radial-gradient(circle at 30% 50%, #223CCF, #1B2FA6, #4A5ECD);
+    --primary-color: #223CCF;
+    --secondary-color: #1B2FA6;
+    --accent-color: #FFC008;
+    --dark-color: #222222;
     --light-color: #f8f9fa;
     --text-color: #333;
     --text-muted: #6c757d;
@@ -75,7 +75,7 @@
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(135deg, rgba(16, 43, 175, 0.9) 0%, rgba(22, 100, 255, 0.9) 50%, rgba(16, 43, 175, 0.9) 100%), url('../images/header-bg.jpg');
+    background: linear-gradient(135deg, rgba(27, 47, 166, 0.9) 0%, rgba(34, 60, 207, 0.9) 50%, rgba(27, 47, 166, 0.9) 100%), url('../images/header-bg.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -88,7 +88,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(16, 43, 175, 0.8) 0%, rgba(22, 100, 255, 0.8) 50%, rgba(16, 43, 175, 0.8) 100%);
+    background: linear-gradient(135deg, rgba(27, 47, 166, 0.8) 0%, rgba(34, 60, 207, 0.8) 50%, rgba(27, 47, 166, 0.8) 100%);
     z-index: 1;
 }
 
@@ -255,7 +255,7 @@
     transition: var(--transition);
     position: relative;
     overflow: hidden;
-    border: 1px solid rgba(22, 100, 255, 0.1);
+    border: 1px solid rgba(34, 60, 207, 0.1);
     height: 100%; /* Ensure all cards have same height */
 }
 
@@ -442,7 +442,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(16, 43, 175, 0.9) 0%, rgba(22, 100, 255, 0.9) 50%, rgba(16, 43, 175, 0.9) 100%);
+    background: linear-gradient(135deg, rgba(27, 47, 166, 0.9) 0%, rgba(34, 60, 207, 0.9) 50%, rgba(27, 47, 166, 0.9) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -498,7 +498,7 @@
     box-shadow: var(--shadow-light);
     transition: var(--transition);
     margin-bottom: 30px;
-    border: 1px solid rgba(22, 100, 255, 0.1);
+    border: 1px solid rgba(34, 60, 207, 0.1);
     height: 100%; /* Ensure all benefit cards have same height */
     display: flex;
     flex-direction: column;
@@ -568,7 +568,7 @@
     box-shadow: var(--shadow-light);
     transition: var(--transition);
     margin-bottom: 30px;
-    border: 1px solid rgba(22, 100, 255, 0.1);
+    border: 1px solid rgba(34, 60, 207, 0.1);
     height: 100%;
 }
 
@@ -713,7 +713,7 @@
    CALL FOR SPEAKERS BANNER
 ======================================== */
 .cfs-banner {
-    background: linear-gradient(135deg, #0d2390 0%, #1664ff 55%, #102baf 100%);
+    background: linear-gradient(135deg, #16257F 0%, #223CCF 55%, #1B2FA6 100%);
     border-radius: var(--border-radius);
     padding: 48px 40px;
     color: white;
@@ -730,14 +730,14 @@
     right: -10%;
     width: 280px;
     height: 280px;
-    background: rgba(255, 193, 7, 0.12);
+    background: rgba(255, 192, 8, 0.12);
     border-radius: 50%;
     pointer-events: none;
 }
 
 .cfs-badge {
     display: inline-block;
-    background: rgba(255, 193, 7, 0.95);
+    background: rgba(255, 192, 8, 0.95);
     color: #16213d;
     font-size: 12px;
     font-weight: 700;
@@ -769,7 +769,7 @@
 }
 
 .cfs-cta {
-    background: rgba(255, 193, 7, 0.96) !important;
+    background: rgba(255, 192, 8, 0.96) !important;
     color: #16213d !important;
     position: relative;
     z-index: 1;
@@ -809,7 +809,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(16, 43, 175, 0.05) 0%, rgba(22, 100, 255, 0.05) 50%, rgba(16, 43, 175, 0.05) 100%);
+    background: linear-gradient(135deg, rgba(27, 47, 166, 0.05) 0%, rgba(34, 60, 207, 0.05) 50%, rgba(27, 47, 166, 0.05) 100%);
 }
 
 h3 {
@@ -827,7 +827,7 @@ h3 {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(26, 26, 46, 0.85); /* Dark overlay to improve readability */
+    background: rgba(27, 47, 166, 0.88); /* Dark overlay to improve readability */
     z-index: 1;
 }
 
@@ -1107,13 +1107,13 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #102baf;
+    background: #1B2FA6;
     border-radius: 999px;
     border: 2px solid #eef2f8;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #0d2390;
+    background: #16257F;
 }
 
 /* Focus states for accessibility */
@@ -1184,7 +1184,7 @@ html {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(22, 100, 255, 0.8);
+    background: rgba(34, 60, 207, 0.8);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1801,7 +1801,7 @@ body {
 }
 
 .navbar-area {
-    background: #102baf;
+    background: #1B2FA6;
     backdrop-filter: blur(14px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
@@ -1846,7 +1846,7 @@ body {
 .modern-hero::before {
     background:
         linear-gradient(180deg, rgba(7, 19, 86, 0.18) 0%, rgba(7, 19, 86, 0.34) 100%),
-        linear-gradient(135deg, rgba(16, 43, 175, 0.94) 0%, rgba(22, 100, 255, 0.9) 52%, rgba(16, 43, 175, 0.94) 100%);
+        linear-gradient(135deg, rgba(27, 47, 166, 0.94) 0%, rgba(34, 60, 207, 0.9) 52%, rgba(27, 47, 166, 0.94) 100%);
 }
 
 .header-content {
@@ -1892,7 +1892,7 @@ body {
     font-size: 15px;
     font-weight: 700;
     letter-spacing: 0.02em;
-    background: rgba(255, 193, 7, 0.96);
+    background: rgba(255, 192, 8, 0.96);
     color: #16213d;
     box-shadow: 0 14px 30px rgba(9, 22, 74, 0.18);
 }
@@ -1908,7 +1908,7 @@ body {
 }
 
 .modern-section::before {
-    background: linear-gradient(90deg, transparent, rgba(22, 100, 255, 0.16), transparent);
+    background: linear-gradient(90deg, transparent, rgba(34, 60, 207, 0.16), transparent);
 }
 
 .gray-bg,
@@ -1924,7 +1924,7 @@ body {
 .info-content p,
 .location-content p,
 .copyright .text {
-    color: #5f6f92 !important;
+    color: var(--text-muted) !important;
 }
 
 .section-subtitle {
@@ -1938,7 +1938,7 @@ body {
     width: 24px;
     bottom: -7px;
     height: 1px;
-    background: rgba(22, 100, 255, 0.38);
+    background: rgba(34, 60, 207, 0.38);
 }
 
 .modern-card,
@@ -1951,7 +1951,7 @@ body {
 .gallery-item,
 .sponsor-logo {
     border-radius: 8px;
-    border: 1px solid rgba(16, 43, 175, 0.08);
+    border: 1px solid rgba(27, 47, 166, 0.08);
     box-shadow: 0 14px 30px rgba(12, 28, 88, 0.06);
 }
 
@@ -1984,7 +1984,7 @@ body {
 .gallery-item:hover {
     transform: translateY(-4px);
     box-shadow: 0 18px 36px rgba(12, 28, 88, 0.1);
-    border-color: rgba(22, 100, 255, 0.16);
+    border-color: rgba(34, 60, 207, 0.16);
 }
 
 .modern-card .features-icon,
@@ -1995,7 +1995,7 @@ body {
     height: 72px;
     margin-bottom: 18px;
     border-radius: 18px;
-    background: rgba(22, 100, 255, 0.08);
+    background: rgba(34, 60, 207, 0.08);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2096,7 +2096,7 @@ body {
 }
 
 .footer-contact .social li a:hover {
-    background: rgba(255, 193, 7, 0.96);
+    background: rgba(255, 192, 8, 0.96);
     color: #16213d;
     transform: translateY(-2px);
 }
@@ -2105,14 +2105,14 @@ body {
     width: 46px;
     height: 46px;
     border-radius: 8px;
-    background: #102baf;
+    background: #1B2FA6;
     border: 1px solid rgba(255, 255, 255, 0.12);
     box-shadow: none;
 }
 
 .modern-back-to-top:hover {
     transform: none;
-    background: #0d2390;
+    background: #16257F;
     box-shadow: none;
 }
 
