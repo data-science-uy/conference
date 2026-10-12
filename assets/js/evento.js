@@ -105,7 +105,7 @@ const EVENTO_AGENDA = [
   },
   {
     id: "navier-stokes", start: "15:15", end: "15:55", track: 1,
-    title: "El problema del milenio de Navier-Stokes, física, AI and chismecito", participants: [EVENTO_SPEAKERS.sofia], confirmed: true,
+    title: "El problema del milenio de Navier-Stokes, fisica, AI y drama", participants: [EVENTO_SPEAKERS.sofia], confirmed: true,
     description: "Una mirada a la solución con IA anunciada para el enigma de Navier–Stokes, uno de los problemas del milenio. Sofía recorre su ciencia, su historia y las disputas que la rodean, incluidas acusaciones de plagio y dilemas éticos. La charla invita a discutir cómo la IA transforma la producción de conocimiento y qué responsabilidades plantea."
   },
   {
