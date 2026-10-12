@@ -167,10 +167,14 @@ h1, h2, h3, h4, h5, h6,
     background: var(--brand-green);
 }
 
-/* Los logos son versiones blancas: cada nivel lleva su color de marca.
-   Solo el nivel Black queda en ink. */
+/* Cada nivel lleva su color de marca. Platinum usa amarillo con logos
+   oscuros para mantener el contraste, igual que en la agenda del evento. */
 .sponsors-2026 .sponsor-tier--platinum .sponsor-tile {
-    background: linear-gradient(135deg, #223CCF 0%, #4A5ECD 100%);
+    background: #FFC008;
+}
+
+.sponsors-2026 .sponsor-tier--platinum .sponsor-tile img {
+    filter: brightness(0);
 }
 
 .sponsors-2026 .sponsor-tier--gold .sponsor-tile {
@@ -179,6 +183,12 @@ h1, h2, h3, h4, h5, h6,
 
 .sponsors-2026 .sponsor-tier--silver .sponsor-tile {
     background: linear-gradient(135deg, #00AD82 0%, #00926E 100%);
+}
+
+/* La versión existente de ORT es oscura sobre fondo transparente. */
+.sponsors-2026 .sponsor-tile img.ort-logo {
+    filter: brightness(0) invert(1);
+    aspect-ratio: 3 / 1;
 }
 
 .sponsors-2026 .sponsor-tier--black .sponsor-tile {
