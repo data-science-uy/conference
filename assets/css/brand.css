@@ -191,6 +191,10 @@ h1, h2, h3, h4, h5, h6,
     aspect-ratio: 3 / 1;
 }
 
+.sponsors-2026 .sponsor-tile img.cognitive-logo {
+    aspect-ratio: 3 / 1;
+}
+
 .sponsors-2026 .sponsor-tier--black .sponsor-tile {
     background: var(--dark-color);
 }
