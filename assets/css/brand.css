@@ -185,9 +185,7 @@ h1, h2, h3, h4, h5, h6,
     background: linear-gradient(135deg, #00AD82 0%, #00926E 100%);
 }
 
-/* La versión existente de ORT es oscura sobre fondo transparente. */
 .sponsors-2026 .sponsor-tile img.ort-logo {
-    filter: brightness(0) invert(1);
     aspect-ratio: 3 / 1;
 }
 

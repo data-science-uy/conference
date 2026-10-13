@@ -1,0 +1,246 @@
+/* ========================================
+   CONNECTIA 2026 — Video de sponsors (loop para pantallas del evento)
+   Escenario fijo de 1920 × 1080; el JS lo escala para llenar la pantalla.
+   Colores y tipografía de brand.css.
+======================================== */
+
+@font-face {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-display: block;
+    src: url("../fonts/poppins/poppins-600-latin.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    font-display: block;
+    src: url("../fonts/poppins/poppins-700-latin.woff2") format("woff2");
+}
+
+:root {
+    --blue: #223CCF;
+    --blue-deep: #1B2FA6;
+    --blue-soft: #4A5ECD;
+    --yellow: #FFC008;
+    --white: #FFFFFF;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    background: var(--blue-deep);
+    cursor: none;
+}
+
+/* ---------- Escenario ---------- */
+.stage {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 1920px;
+    height: 1080px;
+    margin: -540px 0 0 -960px;
+    overflow: hidden;
+    background: var(--blue);
+    color: var(--white);
+    font-family: "Poppins", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    transform-origin: 50% 50%;
+}
+
+.stage > * {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+}
+
+.layer {
+    width: 100%;
+    height: 100%;
+}
+
+.bg {
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse 78% 88% at 50% 44%, var(--blue) 0%, var(--blue) 42%, var(--blue-deep) 100%);
+}
+
+.ambient {
+    width: 1500px;
+    height: 1500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(74, 94, 205, 0.5) 0%, rgba(74, 94, 205, 0) 62%);
+}
+
+.ambient--soft {
+    opacity: 0.7;
+}
+
+.grain {
+    width: 1920px;
+    height: 1080px;
+}
+
+/* ---------- Pelotas ---------- */
+.sphere {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 512px;
+    height: 512px;
+    transform-origin: 50% 50%;
+}
+
+/* ---------- Logos ---------- */
+.logo,
+.brand {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform-origin: 50% 50%;
+    visibility: hidden;
+}
+
+.brand {
+    width: 1100px;
+    height: auto;
+}
+
+.logo img {
+    position: absolute;
+    display: block;
+    max-width: none;
+}
+
+.spot {
+    left: 60px;
+    top: 90px;
+    width: 1800px;
+    height: 1000px;
+    background: radial-gradient(ellipse 50% 50% at 50% 50%, rgba(74, 94, 205, 0.78) 0%, rgba(74, 94, 205, 0.32) 38%, rgba(74, 94, 205, 0) 72%);
+    opacity: 0;
+}
+
+.divider {
+    left: 959px;
+    top: 475px;
+    width: 2px;
+    height: 130px;
+    border-radius: 1px;
+    background: rgba(255, 255, 255, 0.3);
+    opacity: 0;
+}
+
+/* ---------- Textos ---------- */
+.txt {
+    white-space: nowrap;
+    opacity: 0;
+}
+
+.phrase {
+    font-size: 54px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.accent {
+    color: var(--yellow);
+}
+
+.tier-label {
+    left: 96px;
+    top: 90px;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.24em;
+}
+
+/* Compensa el espacio que deja el letter-spacing después de la última letra. */
+.tier-label span {
+    margin-right: -0.24em;
+}
+
+.tier-label::before,
+.tier-label--center::after {
+    content: "";
+    flex: none;
+    width: 44px;
+    height: 6px;
+    border-radius: 3px;
+    background: var(--yellow);
+}
+
+.tier-label--center {
+    font-size: 32px;
+    letter-spacing: 0.3em;
+}
+
+.tier-label--center span {
+    margin-right: -0.3em;
+}
+
+/* Títulos de nivel en la composición final. */
+.tier-label--small {
+    gap: 16px;
+    font-size: 22px;
+    letter-spacing: 0.26em;
+}
+
+.tier-label--small span {
+    margin-right: -0.26em;
+}
+
+.tier-label--small::before,
+.tier-label--small::after {
+    width: 30px;
+    height: 5px;
+}
+
+.message {
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* ---------- Declaraciones de interés (ANII, MEC) ---------- */
+.endorse {
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    opacity: 0;
+}
+
+.endorse__logo {
+    position: relative;
+    display: block;
+    flex: none;
+}
+
+.endorse__logo img {
+    position: absolute;
+    display: block;
+    max-width: none;
+}
+
+.endorse__divider {
+    flex: none;
+    width: 2px;
+    height: 104px;
+    border-radius: 1px;
+    background: rgba(255, 255, 255, 0.3);
+}
