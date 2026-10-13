@@ -101,6 +101,7 @@ const EVENTO_AGENDA = [
   {
     id: "genexus", start: "14:30", end: "15:10", track: 1,
     title: "De la Software Factory a la Agentic Factory", participants: [EVENTO_SPEAKERS.diego], confirmed: true,
+    label: "Charla patrocinada", sponsor: "GeneXus Consulting",
     description: "Diego recorre el camino de una Software Factory a una Agentic Factory: desde los asistentes individuales hasta agentes que participan en un método compartido. La charla aborda cómo empezar a transformar una fábrica de software para trabajar con agentes. Pensada para líderes de consultoras, responsables de desarrollo y delivery, referentes técnicos y arquitectos, y también para analistas funcionales y responsables de producto."
   },
   {
@@ -158,8 +159,9 @@ function renderAgenda(track, announce = false) {
   for (const item of EVENTO_AGENDA.filter(item => !item.track || item.track === track)) {
     const isBreak = item.type === "break";
     const card = document.createElement(isBreak ? "article" : "button");
-    card.className = `agenda-card agenda-card--${isBreak ? "break" : "talk"}`;
+    card.className = `agenda-card agenda-card--${isBreak ? "break" : "talk"}${item.sponsor ? " agenda-card--sponsored" : ""}`;
     card.dataset.event = item.id;
+    if (item.sponsor) card.append(span("card-sponsor", `Patrocinada por ${item.sponsor}`));
     const top = document.createElement("span");
     top.className = "card-top";
     top.append(span("card-time", eventTime(item)));
@@ -195,6 +197,7 @@ function renderAgenda(track, announce = false) {
 function openTalk(item) {
   const kind = document.getElementById("dialog-kind");
   kind.textContent = item.track ? `Track ${item.track} · ${item.label || "Charla"}` : item.label;
+  if (item.sponsor) kind.textContent += ` por ${item.sponsor}`;
   kind.dataset.track = item.track || "shared";
   document.getElementById("dialog-title").textContent = item.title;
   document.getElementById("dialog-meta").textContent = `${eventTime(item)} · ${item.track ? EVENTO_TRACKS[item.track].location : "Auditorio LATU · Actividad compartida"}`;
