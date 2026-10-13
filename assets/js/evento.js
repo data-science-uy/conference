@@ -33,6 +33,12 @@ const EVENTO_SPEAKERS = {
     photo: "../assets/images/speakers/2026/rodrigo-sastre.webp",
     linkedin: "https://www.linkedin.com/in/rodrigo-sastre-2797672b0/",
     funFact: "De niño quería ser cantante, Dexter (el del laboratorio) o cajero de supermercado."
+  }),
+  diego: participant("Diego de Fuentes", "Speaker", {
+    title: "CTO · Licenciado en Sistemas", institution: "GeneXus Consulting",
+    photo: "../assets/images/speakers/2026/diego-de-fuentes.webp",
+    linkedin: "https://www.linkedin.com/in/diego-de-fuentes-b6613156/",
+    funFact: "Es fan de Nacional y de las motos."
   })
 };
 const EVENTO_PANELISTS = {
@@ -94,9 +100,8 @@ const EVENTO_AGENDA = [
   { id: "almuerzo", start: "13:00", end: "14:30", title: "Almuerzo", location: "Hall del auditorio", type: "break" },
   {
     id: "genexus", start: "14:30", end: "15:10", track: 1,
-    title: "Charla patrocinada por GeneXus Consulting", label: "Título por confirmar",
-    participants: [participant("Speaker por confirmar")],
-    description: "Próximamente compartiremos el título y los detalles de esta charla patrocinada por GeneXus Consulting."
+    title: "De la Software Factory a la Agentic Factory", participants: [EVENTO_SPEAKERS.diego], confirmed: true,
+    description: "Diego recorre el camino de una Software Factory a una Agentic Factory: desde los asistentes individuales hasta agentes que participan en un método compartido. La charla aborda cómo empezar a transformar una fábrica de software para trabajar con agentes. Pensada para líderes de consultoras, responsables de desarrollo y delivery, referentes técnicos y arquitectos, y también para analistas funcionales y responsables de producto."
   },
   {
     id: "data-governance", start: "14:30", end: "15:10", track: 2,
