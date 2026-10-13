@@ -21,7 +21,7 @@
     var SVG = 'svgs/';
 
     /* ---------- 1. Sponsors 2026 (misma lista que index.html y evento/) ----------
-       Logos oficiales en SVG (video-sponsors/svgs/), usados tal cual. GeneXus usa
+       Logos oficiales en SVG (video-sponsors/svgs/), usados tal cual. GeneXus Consulting usa
        el PNG: su SVG trae un contorno negro (stroke) que el logo oficial no tiene.
        file: tamaño del archivo (el viewBox, en los SVG). box: área visible
        [x0, y0, x1, y1] en esas mismas unidades; sirve para equilibrar tamaños
