@@ -161,7 +161,7 @@ function renderAgenda(track, announce = false) {
     const card = document.createElement(isBreak ? "article" : "button");
     card.className = `agenda-card agenda-card--${isBreak ? "break" : "talk"}${item.sponsor ? " agenda-card--sponsored" : ""}`;
     card.dataset.event = item.id;
-    if (item.sponsor) card.append(span("card-sponsor", `Patrocinada por ${item.sponsor}`));
+    if (item.sponsor) card.append(span("card-sponsor", `Presentada por ${item.sponsor}`));
     const top = document.createElement("span");
     top.className = "card-top";
     top.append(span("card-time", eventTime(item)));

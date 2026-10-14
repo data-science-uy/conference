@@ -60,7 +60,7 @@ h2 { font-size: 1.8rem; font-weight: 700; letter-spacing: -.04em; line-height: 1
 .agenda-card--talk { position: relative; transition: transform 160ms ease, background 160ms ease; }
 .agenda-card--talk:hover { background: white; transform: translateY(-2px); }
 .agenda-card--sponsored { border: 2px solid var(--yellow); box-shadow: 0 0 0 4px #ffc00833, 0 8px 20px #08123114; }
-.card-sponsor { display: inline-flex; margin-bottom: 11px; padding: 5px 8px; border-radius: 6px; background: var(--yellow); color: var(--ink); font-size: .62rem; font-weight: 800; letter-spacing: .045em; text-transform: uppercase; line-height: 1.4; }
+.card-sponsor { display: inline-flex; margin-bottom: 11px; padding: 5px 8px; border-radius: 6px; background: var(--ink); color: #fff; font-size: .62rem; font-weight: 800; letter-spacing: .045em; text-transform: uppercase; line-height: 1.4; }
 .card-top { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
 .card-time { font: 600 .76rem "IBM Plex Mono", monospace; color: #38416e; white-space: nowrap; }
 .card-tag { display: inline-flex; align-items: center; gap: 4px; color: var(--track-1); font-size: .6rem; font-weight: 800; text-transform: uppercase; letter-spacing: .045em; background: #007c8310; padding: 5px 7px; border-radius: 6px; }
