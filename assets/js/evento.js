@@ -65,6 +65,10 @@ const EVENTO_PANELISTS = {
   ignacio: participant("Ignacio Lynch", "Panelista", {
     title: "Economista / Coordinador Académico de Postgrados / CEO", institution: "UM / Octopus Data Solutions",
     photo: "../assets/images/speakers/2026/ignacio-lynch.webp", linkedin: "https://www.linkedin.com/in/ignaciolynch"
+  }),
+  martin: participant("Martín Rebour", "Panelista", {
+    title: "Doctor en Educación / Psicólogo / Especialista en Educación", institution: "Ceibal",
+    photo: "../assets/images/speakers/2026/martin-rebour.jpg", linkedin: "https://www.linkedin.com/in/mart%C3%ADn-rebour-492a8685/"
   })
 };
 const EVENTO_MODERATORS = {
@@ -94,7 +98,7 @@ const EVENTO_AGENDA = [
   {
     id: "panel-pensamiento", start: "12:00", end: "13:00", type: "panel",
     title: "¿Estamos tercerizando nuestra capacidad de pensar?", label: "Panel 1",
-    participants: [EVENTO_PANELISTS.marcos, EVENTO_PANELISTS.guillermo, EVENTO_PANELISTS.ignacio, EVENTO_MODERATORS.franz],
+    participants: [EVENTO_PANELISTS.marcos, EVENTO_PANELISTS.guillermo, EVENTO_PANELISTS.ignacio, EVENTO_PANELISTS.martin, EVENTO_MODERATORS.franz],
     description: "Una conversación sobre cómo el uso cotidiano de la inteligencia artificial puede transformar nuestro pensamiento, nuestro criterio y la forma en que tomamos decisiones."
   },
   { id: "almuerzo", start: "13:00", end: "14:30", title: "Almuerzo", location: "Hall del auditorio", type: "break" },
