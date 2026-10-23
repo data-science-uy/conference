@@ -46,7 +46,7 @@ const EVENTO_PANELISTS = {
     title: "Engineering Manager, Machine Learning and AI", institution: "Xmartlabs / Universidad Loyola Andalucía",
     photo: "../assets/images/speakers/2026/marcos-soto.webp", linkedin: "https://www.linkedin.com/in/marcosesoto/"
   }),
-  bruno: participant("Bruno Tomás Caracini", "Panelista", {
+  bruno: participant("Bruno Caracini", "Panelista", {
     title: "AI Lead Engineer", institution: "Blend360",
     photo: "../assets/images/speakers/2026/bruno-caracini.webp", linkedin: "https://www.linkedin.com/in/bruno-tomas-caracini/"
   }),
@@ -69,6 +69,10 @@ const EVENTO_PANELISTS = {
   martin: participant("Martín Rebour", "Panelista", {
     title: "Doctor en Educación / Psicólogo / Especialista en Educación", institution: "Ceibal",
     photo: "../assets/images/speakers/2026/martin-rebour.jpg", linkedin: "https://www.linkedin.com/in/mart%C3%ADn-rebour-492a8685/"
+  }),
+  patricia: participant("Patricia Díaz", "Panelista", {
+    title: "Docente, investigadora y consultora en derechos digitales",
+    photo: "../assets/images/speakers/2026/patricia-diaz.webp", linkedin: "https://www.linkedin.com/in/drapatriciadiaz/"
   })
 };
 const EVENTO_MODERATORS = {
@@ -127,7 +131,7 @@ const EVENTO_AGENDA = [
   {
     id: "panel-soberania", start: "16:20", end: "17:20", type: "panel",
     title: "¿Pueden Uruguay y la región tener soberanía en IA?", label: "Panel 2",
-    participants: [EVENTO_PANELISTS.bruno, EVENTO_PANELISTS.lorena, EVENTO_PANELISTS.matias, EVENTO_MODERATORS.leandro],
+    participants: [EVENTO_PANELISTS.bruno, EVENTO_PANELISTS.lorena, EVENTO_PANELISTS.matias, EVENTO_PANELISTS.patricia, EVENTO_MODERATORS.leandro],
     description: "Un intercambio sobre las capacidades, los desafíos y las oportunidades de Uruguay y la región para desarrollar autonomía y soberanía en inteligencia artificial."
   },
   { id: "cierre", start: "17:20", end: "18:00", title: "Cierre y sorpresas", type: "break" }
