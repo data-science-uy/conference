@@ -71,7 +71,7 @@ const EVENTO_PANELISTS = {
     photo: "../assets/images/speakers/2026/martin-rebour.jpg", linkedin: "https://www.linkedin.com/in/mart%C3%ADn-rebour-492a8685/"
   }),
   patricia: participant("Patricia Díaz", "Panelista", {
-    title: "Docente, investigadora y consultora en derechos digitales",
+    title: "Docente, investigadora y consultora en derechos digitales", institution: "DATA Uruguay",
     photo: "../assets/images/speakers/2026/patricia-diaz.webp", linkedin: "https://www.linkedin.com/in/drapatriciadiaz/"
   })
 };
